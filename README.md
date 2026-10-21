@@ -5,7 +5,7 @@ Premium, editorial wedding photography and cinematography website. This reposito
 ## Current status
 
 - Phase 0 brief and architecture: complete.
-- Phase 1 design system and frontend foundation: pending approval.
+- Phase 1 design system and frontend foundation: in progress.
 - Backend, admin, analytics, and deployment: intentionally deferred.
 
 ## Technology direction
@@ -24,4 +24,4 @@ All names, locations, testimonials, contact details, social links, images, video
 
 ## Next checkpoint
 
-After approval, build only Phase 1: design tokens, reset, typography, global layout, shared header/footer, buttons, form controls, reusable sections, and responsive foundations. Test that shared foundation before beginning public pages.
+Phase 1 now contains the shared design foundation and a small, non-production preview page. Its navigation links only to implemented on-page sections, and its disabled inquiry controls explicitly do not collect data. The remaining Phase 1 browser checks are in `docs/testing-checklist.md`.
