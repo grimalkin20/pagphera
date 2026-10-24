@@ -1,74 +1,142 @@
+/* ============================================================
+   components.css — Buttons, text-links, tags, badges
+   ============================================================ */
+
+/* ── Buttons ─────────────────────────────────────────── */
+
 .button {
   align-items: center;
   border: 1px solid transparent;
+  cursor: pointer;
   display: inline-flex;
+  font-family: var(--font-sans);
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 600;
+  gap: var(--space-2);
   justify-content: center;
-  letter-spacing: 0.02em;
-  min-block-size: 3rem;
-  padding: 0.75rem 1.2rem;
+  letter-spacing: 0.06em;
+  min-block-size: 2.75rem;
+  padding: 0.625rem 1.5rem;
   text-decoration: none;
-  transition: background-color var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+  text-transform: uppercase;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
 }
 
+/* Gold CTA — matches HOTC's olive-gold button */
+.button--gold {
+  background: var(--color-gold-btn);
+  border-color: var(--color-gold-btn);
+  color: var(--color-white);
+}
+.button--gold:hover {
+  background: #705f3e;
+  border-color: #705f3e;
+}
+
+/* Ink / dark */
 .button--ink {
   background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-white);
+}
+.button--ink:hover { background: var(--color-charcoal); border-color: var(--color-charcoal); }
+
+/* Outline dark */
+.button--outline {
+  background: transparent;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+.button--outline:hover { background: var(--color-ink); color: var(--color-white); }
+
+/* Ghost — transparent border on dark backgrounds */
+.button--ghost {
+  background: transparent;
+  border-color: rgba(255 255 255 / 0.45);
+  color: var(--color-white);
+}
+.button--ghost:hover {
+  background: rgba(255 255 255 / 0.1);
+  border-color: var(--color-white);
+}
+
+/* Light — white on dark */
+.button--light {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-ink);
+}
+.button--light:hover { background: var(--color-bg); border-color: var(--color-bg); }
+
+/* Ghost small (cookie banner) */
+.button--ghost-sm {
+  background: transparent;
+  border-color: rgba(255 255 255 / 0.25);
+  color: rgba(255 255 255 / 0.75);
+  font-size: var(--text-xs);
+  min-block-size: 2.25rem;
+  padding: 0.4rem 0.8rem;
+}
+.button--ghost-sm:hover { color: var(--color-white); border-color: rgba(255 255 255 / 0.55); }
+
+/* Submit / wide */
+.button--submit { min-inline-size: 10rem; }
+
+/* ── Text links ──────────────────────────────────────── */
+
+.text-link {
+  background: none;
+  border: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-transform: uppercase;
+  text-underline-offset: 0.28em;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+.text-link:hover { opacity: 0.6; }
+
+/* ── Filter buttons ──────────────────────────────────── */
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: var(--space-2) var(--space-4);
+  text-transform: uppercase;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+}
+.filter-btn:hover { border-color: var(--color-charcoal); color: var(--color-ink); }
+.filter-btn--active,
+.filter-btn[aria-pressed="true"] {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
   color: var(--color-white);
 }
 
-.button--ink:hover {
-  background: var(--color-charcoal);
-}
+/* ── Story tag pills ─────────────────────────────────── */
 
-.button--light {
-  background: var(--color-cream);
-  color: var(--color-ink);
-}
-
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.58;
-}
-
-.text-link {
-  font-size: var(--text-sm);
+.story-tag {
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: var(--text-xs);
   font-weight: 700;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.22em;
-}
-
-.field {
-  display: grid;
-  gap: var(--space-1);
-}
-
-.field label {
-  font-size: var(--text-sm);
-  font-weight: 700;
-}
-
-.field input,
-.field textarea {
-  appearance: none;
-  background: transparent;
-  border: 1px solid currentColor;
-  border-radius: var(--radius-none);
-  min-block-size: 3rem;
-  padding: 0.75rem;
-}
-
-.field textarea {
-  min-block-size: 7rem;
-}
-
-.field input:disabled,
-.field textarea:disabled {
-  border-color: color-mix(in srgb, currentColor 46%, transparent);
-  cursor: not-allowed;
-}
-
-.form-notice {
-  color: var(--color-peach);
-  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  padding: var(--space-1) var(--space-3);
+  text-transform: uppercase;
 }

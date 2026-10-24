@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Wedding films by Pagphera — cinematic storytelling for your wedding day. Honest sound, considered pacing, and emotion that lasts." />
-    <meta name="theme-color" content="#171513" />
-    <title>Wedding Films — Pagphera</title>
+    <meta name="description" content="Wedding films by Pagphera — cinematic wedding storytelling and documentary cinematography across India and destination horizons." />
+    <meta name="theme-color" content="#131110" />
+    <meta property="og:title" content="Wedding Films &amp; Cinematography — Pagphera" />
+    <meta property="og:description" content="Cinematic wedding storytelling. Honest sound, considered pacing, and unscripted emotion." />
+    <meta property="og:type" content="website" />
+    <title>Wedding Films &amp; Cinematography — Pagphera</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,240 +19,333 @@
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/layouts.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/cookie-consent.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
   </head>
-  <body id="top">
+  <body id="top" style="background: var(--color-ink); color: var(--color-bg);">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header" data-site-header>
+    <!-- Demo Notice -->
+    <aside class="demo-notice" style="background: #252220; border-bottom: 1px solid rgba(255 255 255 / 0.1);" aria-label="Prototype notice">
+      <p>Prototype preview — all films and trailers are original demo content, not client work.</p>
+    </aside>
+
+    <!-- Site Header (Dark Cinema Mode) -->
+    <header class="site-header" style="background: var(--color-ink); border-block-end: 1px solid rgba(255 255 255 / 0.1);" data-site-header>
       <div class="site-header__inner">
-        <a class="wordmark" href="index.html" aria-label="Pagphera — return to home">Pagphera</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+        <a class="wordmark" href="index.html" style="color: var(--color-white);" aria-label="Pagphera — return to home">Pagphera</a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu" style="color: var(--color-white);">
           <span class="menu-toggle__label" aria-hidden="true">Menu</span>
           <span class="menu-toggle__icon" aria-hidden="true"></span>
         </button>
-        <nav class="site-navigation" id="primary-navigation" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="portfolio.html">Stories</a>
-          <a href="films.html" aria-current="page">Films</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="inquiry.html" class="nav-cta">Inquire</a>
-        </nav>
+
+        <div class="nav-cluster">
+          <nav class="site-navigation" id="primary-navigation" aria-label="Primary navigation" style="background: var(--color-ink);">
+            <a href="portfolio.html" style="color: var(--color-white);">Photography</a>
+            <a href="films.html" aria-current="page" style="color: var(--color-gold);">Films</a>
+            <a href="stories.html" style="color: var(--color-white);">Stories</a>
+            <a href="inquiry.html" style="color: var(--color-white);">Contact Us</a>
+
+            <!-- More dropdown -->
+            <div class="nav-dropdown" data-nav-dropdown>
+              <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-haspopup="true" id="nav-dropdown-more" style="color: var(--color-white);">
+                <span>More</span>
+                <svg class="nav-dropdown__caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown__menu" role="menu" aria-labelledby="nav-dropdown-more" style="background: #1c1917; border-color: rgba(255 255 255 / 0.15);">
+                <a href="services.html" role="menuitem" style="color: var(--color-white) !important;">Services</a>
+                <a href="careers.html" role="menuitem" style="color: var(--color-white) !important;">Careers</a>
+                <a href="travel.html" role="menuitem" style="color: var(--color-white) !important;">Travel</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="nav-social" aria-label="Social media">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+
+          <a class="button button--gold" href="inquiry.html">Get In Touch</a>
+        </div>
       </div>
     </header>
 
     <main id="main-content" tabindex="-1">
 
       <!-- Films Hero -->
-      <section class="section section--night films-page-hero" aria-labelledby="films-title">
-        <div class="films-page-hero__content flow">
-          <p class="eyebrow eyebrow--light">Cinematography</p>
-          <h1 id="films-title">Motion gives memory another language.</h1>
-          <p class="lede">We make wedding films that feel like the day did — not a highlight reel, but a document of how it actually unfolded.</p>
+      <section class="section section--night films-page-hero" aria-labelledby="films-page-title" style="padding-block-end: var(--space-6);">
+        <div class="films-page-hero__content flow section-inner">
+          <p class="eyebrow eyebrow--light" style="color: var(--color-gold);">Documentary Cinematography</p>
+          <h1 id="films-page-title" style="color: var(--color-white); font-size: clamp(2.4rem, 1.8rem + 3vw, 4.5rem);">
+            <em>Motion gives memory</em><br>another language.
+          </h1>
+          <p class="lede" style="color: rgba(255 255 255 / 0.85); max-inline-size: 60ch;">
+            We do not manufacture artificial music videos or drone-heavy montage reels. We listen for the crackle in a father's voice, the cadence of evening prayers, and the silence before laughter breaks out.
+          </p>
         </div>
       </section>
 
-      <aside class="demo-notice" aria-label="Prototype content notice">
-        <p><strong>Prototype preview.</strong> Film posters and descriptions below are demo content. Real films will be listed after studio authorization. Video embeds are deferred until user action and, where required, consent.</p>
-      </aside>
+      <!-- Featured Film Spotlight (Anamorphic Cinema Style) -->
+      <section class="section section--full" style="padding-block: 0;" aria-label="Featured Wedding Film">
+        <div class="full-bleed" style="max-height: 80vh; overflow: hidden; position: relative;">
+          <img
+            src="assets/images/stories/demo-reception-night.jpg"
+            alt="Couple dancing at midnight reception beneath illuminated chandeliers."
+            width="1600"
+            height="900"
+            fetchpriority="high"
+          />
+          <div class="home-hero__overlay" style="background: linear-gradient(to top, rgba(19 17 16 / 0.95) 0%, rgba(19 17 16 / 0.3) 60%, rgba(19 17 16 / 0.7) 100%);" aria-hidden="true"></div>
+          <div class="home-hero__content" style="bottom: var(--space-6);">
+            <p class="eyebrow eyebrow--light" style="color: var(--color-gold);">Featured 4K Cinema · 2.39:1 Anamorphic</p>
+            <h2 style="color: var(--color-white); font-size: clamp(2rem, 1.5rem + 2.5vw, 3.8rem);"><em>A Night in the Palace · Jaipur</em></h2>
+            <p class="lede" style="color: rgba(255 255 255 / 0.85); max-inline-size: 50ch;">Documenting Kabir &amp; Mira's twilight reception under hundred-year-old banyan trees and floating candlelight.</p>
+            <div class="hero-actions" style="margin-block-start: var(--space-4);">
+              <button class="button button--gold film-play-trigger" type="button" aria-haspopup="dialog" id="play-featured-film">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 1.5L15 9L1 16.5V1.5Z"/></svg>
+                <span>Watch Film Trailer (4:22)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Films Grid -->
-      <section class="section films-grid-section" aria-labelledby="films-grid-title">
-        <h2 id="films-grid-title" class="sr-only">Wedding films</h2>
-        <div class="films-grid">
+      <section class="section films-grid-section" aria-labelledby="films-grid-title" style="padding-block: var(--space-7);">
+        <div class="section-inner">
+          <div class="stories-section__header" style="margin-block-end: var(--space-6);">
+            <div>
+              <p class="eyebrow" style="color: var(--color-gold);">Curated Highlight Films</p>
+              <h2 id="films-grid-title" style="color: var(--color-white);">Selected Wedding Features</h2>
+            </div>
+            <p style="color: rgba(255 255 255 / 0.6); font-size: var(--text-sm); margin: 0;">Captured on digital cinema primes with spatial sound</p>
+          </div>
 
-          <article class="film-card" aria-labelledby="film-01-title">
-            <div class="film-card__poster">
-              <img src="assets/images/stories/demo-reception-night.jpg" alt="Demo couple dancing at palace reception — poster for demo film." width="1280" height="720" loading="lazy" />
-              <button
-                class="film-card__play"
-                type="button"
-                aria-label="Play demo film: A night in the palace — this is a prototype, no real video is linked"
-                data-film-id="demo-film-01"
-                data-film-notice="This is a prototype. Real video embeds will be connected in a future phase."
-              >
-                <span class="film-play-icon" aria-hidden="true">
-                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true" focusable="false">
-                    <path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/>
-                  </svg>
-                </span>
-                <span>Watch film</span>
-              </button>
-              <span class="film-card__duration" aria-label="Film duration: 4 minutes 22 seconds">4:22</span>
-            </div>
-            <div class="film-card__meta">
-              <p class="eyebrow">Demo film &middot; Reception highlight</p>
-              <h3 id="film-01-title">A night in the palace</h3>
-              <p>Jaipur, Rajasthan &middot; Demo date</p>
-            </div>
-          </article>
+          <div class="films-grid">
 
-          <article class="film-card" aria-labelledby="film-02-title">
-            <div class="film-card__poster">
-              <img src="assets/images/stories/demo-ceremony-mandap.jpg" alt="Demo wedding ceremony at lakeside palace — poster for demo film." width="1600" height="900" loading="lazy" />
-              <button
-                class="film-card__play"
-                type="button"
-                aria-label="Play demo film: Where the water meets the vows — prototype only"
-                data-film-id="demo-film-02"
-                data-film-notice="This is a prototype. Real video embeds will be connected in a future phase."
-              >
-                <span class="film-play-icon" aria-hidden="true">
-                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true" focusable="false">
-                    <path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/>
-                  </svg>
-                </span>
-                <span>Watch film</span>
-              </button>
-              <span class="film-card__duration" aria-label="Film duration: 6 minutes 15 seconds">6:15</span>
-            </div>
-            <div class="film-card__meta">
-              <p class="eyebrow">Demo film &middot; Full-day story</p>
-              <h3 id="film-02-title">Where the water meets the vows</h3>
-              <p>Udaipur, Rajasthan &middot; Demo date</p>
-            </div>
-          </article>
+            <!-- Film 1 -->
+            <article class="film-card" aria-labelledby="film-01-title" style="background: #1c1917; border: 1px solid rgba(255 255 255 / 0.1);">
+              <div class="film-card__poster">
+                <img src="assets/images/stories/demo-ceremony-mandap.jpg" alt="Lakeside mandap at golden hour in Udaipur." width="1280" height="720" loading="lazy" />
+                <button class="film-card__play film-play-trigger" type="button" aria-label="Play film: Where the water meets the vows">
+                  <span class="film-play-icon" aria-hidden="true">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"><path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/></svg>
+                  </span>
+                  <span>Play Film</span>
+                </button>
+                <span class="film-card__duration">6:15</span>
+              </div>
+              <div class="film-card__meta" style="padding: var(--space-4);">
+                <p class="eyebrow" style="color: var(--color-gold);">Udaipur · Full-Day Cinema</p>
+                <h3 id="film-01-title" style="color: var(--color-white); font-size: var(--text-md); margin-block: var(--space-1);">Where the water meets the vows</h3>
+                <p style="color: rgba(255 255 255 / 0.6); font-size: var(--text-sm);">Lake Pichola vows, Rajasthani folk strings, and late evening fireworks.</p>
+              </div>
+            </article>
 
-          <article class="film-card" aria-labelledby="film-03-title">
-            <div class="film-card__poster">
-              <img src="assets/images/stories/demo-pheras-fire.jpg" alt="Demo pheras ceremony — poster for demo film." width="1280" height="853" loading="lazy" />
-              <button
-                class="film-card__play"
-                type="button"
-                aria-label="Play demo film: Seven steps, one story — prototype only"
-                data-film-id="demo-film-03"
-                data-film-notice="This is a prototype. Real video embeds will be connected in a future phase."
-              >
-                <span class="film-play-icon" aria-hidden="true">
-                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true" focusable="false">
-                    <path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/>
-                  </svg>
-                </span>
-                <span>Watch film</span>
-              </button>
-              <span class="film-card__duration" aria-label="Film duration: 5 minutes 40 seconds">5:40</span>
-            </div>
-            <div class="film-card__meta">
-              <p class="eyebrow">Demo film &middot; Ceremony</p>
-              <h3 id="film-03-title">Seven steps, one story</h3>
-              <p>Bengaluru, Karnataka &middot; Demo date</p>
-            </div>
-          </article>
+            <!-- Film 2 -->
+            <article class="film-card" aria-labelledby="film-02-title" style="background: #1c1917; border: 1px solid rgba(255 255 255 / 0.1);">
+              <div class="film-card__poster">
+                <img src="assets/images/bride/bride-mirror-portrait-one.jpg" alt="Bride mirror reflection in candlelit floral courtyard in Samode." width="1280" height="720" loading="lazy" />
+                <button class="film-card__play film-play-trigger" type="button" aria-label="Play film: Before everyone arrives">
+                  <span class="film-play-icon" aria-hidden="true">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"><path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/></svg>
+                  </span>
+                  <span>Play Film</span>
+                </button>
+                <span class="film-card__duration">5:40</span>
+              </div>
+              <div class="film-card__meta" style="padding: var(--space-4);">
+                <p class="eyebrow" style="color: var(--color-gold);">Jaipur · Editorial Film</p>
+                <h3 id="film-02-title" style="color: var(--color-white); font-size: var(--text-md); margin-block: var(--space-1);">Before everyone arrives</h3>
+                <p style="color: rgba(255 255 255 / 0.6); font-size: var(--text-sm);">The quiet anticipation of bridal adornment and quiet family blessings.</p>
+              </div>
+            </article>
 
-          <article class="film-card" aria-labelledby="film-04-title">
-            <div class="film-card__poster">
-              <img src="assets/images/stories/demo-destination-landscape.jpg" alt="Demo destination wedding landscape — poster for demo film." width="1600" height="900" loading="lazy" />
-              <button
-                class="film-card__play"
-                type="button"
-                aria-label="Play demo film: Wherever your people gather — prototype only"
-                data-film-id="demo-film-04"
-                data-film-notice="This is a prototype. Real video embeds will be connected in a future phase."
-              >
-                <span class="film-play-icon" aria-hidden="true">
-                  <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true" focusable="false">
-                    <path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/>
-                  </svg>
-                </span>
-                <span>Watch film</span>
-              </button>
-              <span class="film-card__duration" aria-label="Film duration: 7 minutes 03 seconds">7:03</span>
-            </div>
-            <div class="film-card__meta">
-              <p class="eyebrow">Demo film &middot; Destination</p>
-              <h3 id="film-04-title">Wherever your people gather</h3>
-              <p>Kumbhalgarh, Rajasthan &middot; Demo date</p>
-            </div>
-          </article>
+            <!-- Film 3 -->
+            <article class="film-card" aria-labelledby="film-03-title" style="background: #1c1917; border: 1px solid rgba(255 255 255 / 0.1);">
+              <div class="film-card__poster">
+                <img src="assets/images/stories/demo-pheras-fire.jpg" alt="Pheras ceremony around the sacred fire at night." width="1280" height="720" loading="lazy" />
+                <button class="film-card__play film-play-trigger" type="button" aria-label="Play film: Seven steps, one story">
+                  <span class="film-play-icon" aria-hidden="true">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"><path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/></svg>
+                  </span>
+                  <span>Play Film</span>
+                </button>
+                <span class="film-card__duration">7:10</span>
+              </div>
+              <div class="film-card__meta" style="padding: var(--space-4);">
+                <p class="eyebrow" style="color: var(--color-gold);">Pushkar · Sacred Rites</p>
+                <h3 id="film-03-title" style="color: var(--color-white); font-size: var(--text-md); margin-block: var(--space-1);">Seven steps, one story</h3>
+                <p style="color: rgba(255 255 255 / 0.6); font-size: var(--text-sm);">Vedic recitations, rising embers, and the timeless promises of the saptapadi.</p>
+              </div>
+            </article>
 
+            <!-- Film 4 -->
+            <article class="film-card" aria-labelledby="film-04-title" style="background: #1c1917; border: 1px solid rgba(255 255 255 / 0.1);">
+              <div class="film-card__poster">
+                <img src="assets/images/stories/demo-destination-landscape.jpg" alt="Hilltop fortress overlooking twilight valley." width="1280" height="720" loading="lazy" />
+                <button class="film-card__play film-play-trigger" type="button" aria-label="Play film: The fortress at sunset">
+                  <span class="film-play-icon" aria-hidden="true">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none"><path d="M1 1.5L17 10L1 18.5V1.5Z" fill="currentColor"/></svg>
+                  </span>
+                  <span>Play Film</span>
+                </button>
+                <span class="film-card__duration">4:55</span>
+              </div>
+              <div class="film-card__meta" style="padding: var(--space-4);">
+                <p class="eyebrow" style="color: var(--color-gold);">Kumbhalgarh · Destination Feature</p>
+                <h3 id="film-04-title" style="color: var(--color-white); font-size: var(--text-md); margin-block: var(--space-1);">The fortress at sunset</h3>
+                <p style="color: rgba(255 255 255 / 0.6); font-size: var(--text-sm);">Three days in the Aravalli hills with 200 closest friends and families.</p>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
-      <!-- Film Play Notice Dialog (prototype) -->
-      <dialog class="film-notice-dialog" id="film-notice-dialog" aria-labelledby="film-notice-title">
-        <div class="film-notice-dialog__inner">
-          <h2 id="film-notice-title" class="cookie-dialog__title">Prototype only</h2>
-          <p id="film-notice-body"></p>
-          <button class="button button--ink" type="button" id="film-notice-close">Close</button>
-        </div>
-      </dialog>
-
-      <!-- Approach statement -->
-      <section class="section films-approach" aria-labelledby="films-approach-title">
-        <div class="films-approach__inner">
-          <h2 id="films-approach-title">What we make, and why.</h2>
-          <div class="films-approach__cols">
+      <!-- Cinematography Philosophy & Craft Section -->
+      <section class="section" style="background: #1c1917; border-block: 1px solid rgba(255 255 255 / 0.1);" aria-labelledby="film-craft-title">
+        <div class="section-inner flow">
+          <p class="eyebrow" style="color: var(--color-gold);">Technical Rigor &amp; Artistic Precision</p>
+          <h2 id="film-craft-title" style="color: var(--color-white);">How we build our cinema</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: var(--space-6); margin-block-start: var(--space-4);">
             <div class="flow">
-              <h3>Highlight films</h3>
-              <p>A curated four-to-seven-minute film that returns the emotional arc of the day — ceremony, portraits, celebration. Scored to music selected with the couple's story in mind.</p>
+              <h3 style="color: var(--color-white); font-size: var(--text-base); font-weight: 600;">Acoustic Authenticity</h3>
+              <p style="color: rgba(255 255 255 / 0.7); font-size: var(--text-sm); line-height: 1.6;">
+                We prioritize raw ambient sound over generic stock backing tracks. Subtle microphones capture the trembling sigh of a father, grandmother's whispered blessings, and the actual acoustic reverberation of the wedding hall.
+              </p>
             </div>
             <div class="flow">
-              <h3>Full-day edits</h3>
-              <p>A longer, complete record of the day in sequence — from the morning preparations through the final reception moment. For couples who want everything remembered.</p>
+              <h3 style="color: var(--color-white); font-size: var(--text-base); font-weight: 600;">Organic Color Science</h3>
+              <p style="color: rgba(255 255 255 / 0.7); font-size: var(--text-sm); line-height: 1.6;">
+                Every frame is graded in DaVinci Resolve using custom film emulation curves. Indian skin tones stay warm, natural, and radiant under both fierce golden afternoon sun and subtle night candlelight.
+              </p>
             </div>
             <div class="flow">
-              <h3>Pre-wedding films</h3>
-              <p>A short film made before the wedding, using natural locations and conversation. A way to begin the story and give couples a reference for how we work.</p>
+              <h3 style="color: var(--color-white); font-size: var(--text-base); font-weight: 600;">Unobtrusive Presence</h3>
+              <p style="color: rgba(255 255 255 / 0.7); font-size: var(--text-sm); line-height: 1.6;">
+                We use minimalist camera rigs and compact high-speed prime lenses so our crew blends seamlessly with your guests. No giant cranes, no blinding studio light rigs, and zero staged acting prompts.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Inquiry CTA -->
-      <section class="section inquiry-section" aria-labelledby="films-inquire-title">
-        <div class="inquiry-section__content flow">
-          <p class="eyebrow">Plan your film coverage</p>
-          <h2 id="films-inquire-title">Start the conversation.</h2>
-          <p class="lede">Tell us about your wedding date and location. We'll discuss film coverage options and confirm availability.</p>
-          <a class="button button--ink" href="inquiry.html">Begin your inquiry</a>
+      <section class="section cta-section" aria-labelledby="films-cta-title" style="background: var(--color-ink);">
+        <div class="cta-section__inner flow">
+          <p class="eyebrow" style="color: var(--color-gold);">Commission your wedding film</p>
+          <h2 id="films-cta-title" style="color: var(--color-white);">Every story deserves to be heard.</h2>
+          <p class="lede" style="color: rgba(255 255 255 / 0.85);">We accept only 18 wedding cinematography commissions annually to ensure our directorial attention remains uncompromised.</p>
+          <div class="cta-section__actions">
+            <a class="button button--gold" href="inquiry.html">Check film commission dates</a>
+            <a class="text-link" href="portfolio.html" style="color: var(--color-gold);">Explore photography portfolio <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
 
     </main>
 
-    <footer class="site-footer" aria-label="Site footer">
+    <!-- Site Footer -->
+    <footer class="site-footer" style="background: #0f0e0d; border-block-start: 1px solid rgba(255 255 255 / 0.1);" aria-label="Site footer">
       <div class="site-footer__inner">
         <div class="site-footer__brand">
-          <a class="wordmark" href="index.html">Pagphera</a>
-          <p>Photography and cinematography for celebrations with a story to tell.</p>
+          <a class="wordmark" href="index.html" style="color: var(--color-white);" aria-label="Pagphera — return to home">Pagphera</a>
+          <p style="color: rgba(255 255 255 / 0.65);">Photography and cinematography for celebrations with a story to tell.</p>
+          <div class="footer-social" aria-label="Follow us">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: rgba(255 255 255 / 0.6);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
         </div>
         <nav class="site-footer__nav" aria-label="Footer navigation">
           <div class="footer-nav-group">
-            <h3 class="footer-nav-group__label">Work</h3>
-            <ul><li><a href="portfolio.html">Stories</a></li><li><a href="films.html">Films</a></li><li><a href="services.html">Services</a></li></ul>
+            <h3 class="footer-nav-group__label" style="color: var(--color-white);">Work</h3>
+            <ul>
+              <li><a href="portfolio.html" style="color: rgba(255 255 255 / 0.7);">Photography</a></li>
+              <li><a href="films.html" style="color: var(--color-gold);">Films</a></li>
+              <li><a href="stories.html" style="color: rgba(255 255 255 / 0.7);">Stories</a></li>
+            </ul>
           </div>
           <div class="footer-nav-group">
-            <h3 class="footer-nav-group__label">Studio</h3>
-            <ul><li><a href="about.html">About</a></li><li><a href="inquiry.html">Inquire</a></li></ul>
+            <h3 class="footer-nav-group__label" style="color: var(--color-white);">More</h3>
+            <ul>
+              <li><a href="services.html" style="color: rgba(255 255 255 / 0.7);">Services</a></li>
+              <li><a href="careers.html" style="color: rgba(255 255 255 / 0.7);">Careers</a></li>
+              <li><a href="travel.html" style="color: rgba(255 255 255 / 0.7);">Travel</a></li>
+            </ul>
           </div>
           <div class="footer-nav-group">
-            <h3 class="footer-nav-group__label">Legal</h3>
-            <ul><li><a href="privacy-policy.html">Privacy policy</a></li><li><a href="cookie-policy.html">Cookie policy</a></li><li><a href="terms.html">Terms of use</a></li></ul>
+            <h3 class="footer-nav-group__label" style="color: var(--color-white);">Studio</h3>
+            <ul>
+              <li><a href="about.html" style="color: rgba(255 255 255 / 0.7);">About</a></li>
+              <li><a href="inquiry.html" style="color: rgba(255 255 255 / 0.7);">Contact Us</a></li>
+              <li><a href="privacy-policy.html" style="color: rgba(255 255 255 / 0.7);">Privacy policy</a></li>
+              <li><a href="terms.html" style="color: rgba(255 255 255 / 0.7);">Terms of use</a></li>
+            </ul>
           </div>
         </nav>
-        <div class="site-footer__bottom">
-          <p class="site-footer__note">Prototype website — business details to be confirmed before launch.</p>
-          <button class="text-link cookie-settings-trigger" type="button" id="cookie-settings-trigger">Cookie settings</button>
-          <a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        <div class="site-footer__bottom" style="border-block-start: 1px solid rgba(255 255 255 / 0.1);">
+          <p class="site-footer__note" style="color: rgba(255 255 255 / 0.5);">Prototype website — film embeds and business details will be connected before production release.</p>
+          <button class="text-link cookie-settings-trigger" type="button" id="cookie-settings-trigger" aria-label="Manage cookie preferences" style="color: var(--color-gold);">Cookie settings</button>
+          <a class="text-link" href="#top" aria-label="Back to top" style="color: rgba(255 255 255 / 0.7);">Back to top <span aria-hidden="true">↑</span></a>
         </div>
       </div>
     </footer>
 
+    <!-- Video Play Prototype Dialog -->
+    <dialog class="cookie-dialog" id="film-dialog" aria-labelledby="film-dialog-title" style="max-inline-size: 32rem; background: #1c1917; color: var(--color-white); border: 1px solid rgba(255 255 255 / 0.15);">
+      <div class="cookie-dialog__inner">
+        <div class="cookie-dialog__header" style="border-block-end: 1px solid rgba(255 255 255 / 0.1);">
+          <h2 id="film-dialog-title" class="cookie-dialog__title" style="color: var(--color-white);">Cinematic Preview</h2>
+          <button class="cookie-dialog__close" type="button" aria-label="Close dialog" id="film-dialog-close" style="color: var(--color-white);">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+        </div>
+        <div class="cookie-dialog__body flow" style="padding-block: var(--space-4);">
+          <p style="color: rgba(255 255 255 / 0.85); font-size: var(--text-sm);">
+            <strong>Prototype preview:</strong> This prototype simulates full-screen video playback. In the production deployment, this launches a custom, privacy-conscious 4K video player with streaming optimization.
+          </p>
+        </div>
+        <div class="cookie-dialog__footer" style="border-block-start: 1px solid rgba(255 255 255 / 0.1);">
+          <button class="button button--gold" type="button" id="film-dialog-ok">Understood</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Cookie Consent Banner -->
     <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie consent" aria-live="polite" hidden>
       <div class="cookie-banner__inner">
         <div class="cookie-banner__copy">
           <p><strong>Cookie preferences</strong></p>
-          <p>We use strictly necessary cookies for this site to function. With your consent, we may also use analytics cookies.</p>
-          <a href="cookie-policy.html" class="text-link">Cookie policy <span aria-hidden="true">↗</span></a>
+          <p>We use strictly necessary cookies for this site to function. With your consent, we may also use analytics cookies to understand how visitors use the site. <a href="cookie-policy.html">Cookie policy ↗</a></p>
         </div>
         <div class="cookie-banner__actions">
-          <button class="button button--ink" type="button" id="cookie-accept-all">Accept all</button>
+          <button class="button button--gold" type="button" id="cookie-accept-all">Accept all</button>
           <button class="button button--outline" type="button" id="cookie-reject-optional">Necessary only</button>
           <button class="button button--ghost-sm" type="button" id="cookie-open-prefs">Manage preferences</button>
         </div>
       </div>
     </div>
 
+    <!-- Cookie Preferences Dialog -->
     <dialog class="cookie-dialog" id="cookie-dialog" aria-labelledby="cookie-dialog-title">
       <div class="cookie-dialog__inner">
         <div class="cookie-dialog__header">
@@ -261,25 +357,46 @@
         <div class="cookie-dialog__body">
           <div class="cookie-category">
             <div class="cookie-category__header">
-              <div><h3 class="cookie-category__name">Strictly necessary</h3><p class="cookie-category__desc">Required for the site to function. Cannot be disabled.</p></div>
-              <span class="cookie-toggle cookie-toggle--always-on">Always on</span>
+              <div>
+                <h3 class="cookie-category__name">Strictly necessary</h3>
+                <p class="cookie-category__desc">Required for the site to function. Cannot be disabled.</p>
+              </div>
+              <span class="cookie-toggle cookie-toggle--always-on" aria-label="Always active">Always on</span>
             </div>
           </div>
           <div class="cookie-category">
             <div class="cookie-category__header">
-              <div><h3 class="cookie-category__name">Analytics</h3><p class="cookie-category__desc">Helps us understand how visitors use the site so we can improve it.</p></div>
-              <label class="cookie-toggle"><input type="checkbox" id="pref-analytics" name="analytics" /><span class="cookie-toggle__track" aria-hidden="true"></span></label>
+              <div>
+                <h3 class="cookie-category__name">Analytics</h3>
+                <p class="cookie-category__desc">Helps us understand how visitors use the site. No personal data sold or shared.</p>
+              </div>
+              <label class="cookie-toggle" aria-label="Toggle analytics cookies">
+                <input type="checkbox" id="pref-analytics" name="analytics" />
+                <span class="cookie-toggle__track" aria-hidden="true"></span>
+              </label>
             </div>
           </div>
         </div>
         <div class="cookie-dialog__footer">
-          <button class="button button--ink" type="button" id="cookie-save-prefs">Save preferences</button>
+          <button class="button button--gold" type="button" id="cookie-save-prefs">Save preferences</button>
         </div>
       </div>
     </dialog>
 
-    <script src="assets/js/navigation.js" defer></script>
-    <script src="assets/js/cookie-consent.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
+    <script>
+      // Wire prototype film dialog
+      document.querySelectorAll('.film-play-trigger').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dlg = document.getElementById('film-dialog');
+          if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+        });
+      });
+      document.getElementById('film-dialog-close')?.addEventListener('click', () => {
+        document.getElementById('film-dialog')?.close();
+      });
+      document.getElementById('film-dialog-ok')?.addEventListener('click', () => {
+        document.getElementById('film-dialog')?.close();
+      });
+    </script>
   </body>
 </html>

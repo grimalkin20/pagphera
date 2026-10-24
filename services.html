@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Wedding photography and cinematography services by Pagphera — coverage options for your wedding day, pre-wedding, and destination celebrations." />
-    <meta name="theme-color" content="#fffdf9" />
-    <title>Services — Pagphera</title>
+    <meta name="description" content="Wedding photography and cinematography services by Pagphera — bespoke coverage options for your wedding day, pre-wedding, and destination celebrations." />
+    <meta name="theme-color" content="#ede8df" />
+    <title>Services &amp; Offerings — Pagphera</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,189 +16,264 @@
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/layouts.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/cookie-consent.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <aside class="demo-notice" aria-label="Prototype notice">
+      <p>Prototype preview — services and offerings below are illustrative demo offerings.</p>
+    </aside>
+
+    <!-- Site Header -->
     <header class="site-header" data-site-header>
       <div class="site-header__inner">
         <a class="wordmark" href="index.html" aria-label="Pagphera — return to home">Pagphera</a>
+
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
           <span class="menu-toggle__label" aria-hidden="true">Menu</span>
           <span class="menu-toggle__icon" aria-hidden="true"></span>
         </button>
-        <nav class="site-navigation" id="primary-navigation" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="portfolio.html">Stories</a>
-          <a href="films.html">Films</a>
-          <a href="services.html" aria-current="page">Services</a>
-          <a href="about.html">About</a>
-          <a href="inquiry.html" class="nav-cta">Inquire</a>
-        </nav>
+
+        <div class="nav-cluster">
+          <nav class="site-navigation" id="primary-navigation" aria-label="Primary navigation">
+            <a href="portfolio.html">Photography</a>
+            <a href="films.html">Films</a>
+            <a href="stories.html">Stories</a>
+            <a href="inquiry.html">Contact Us</a>
+
+            <!-- More dropdown -->
+            <div class="nav-dropdown" data-nav-dropdown>
+              <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-haspopup="true" id="nav-dropdown-more">
+                <span>More</span>
+                <svg class="nav-dropdown__caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown__menu" role="menu" aria-labelledby="nav-dropdown-more">
+                <a href="services.html" role="menuitem" aria-current="page">Services</a>
+                <a href="careers.html" role="menuitem">Careers</a>
+                <a href="travel.html" role="menuitem">Travel</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="nav-social" aria-label="Social media">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+
+          <a class="button button--gold" href="inquiry.html">Get In Touch</a>
+        </div>
       </div>
     </header>
 
     <main id="main-content" tabindex="-1">
 
       <section class="page-header section" aria-labelledby="services-title">
-        <p class="eyebrow">What we offer</p>
-        <h1 id="services-title">Coverage for the day you are building.</h1>
-        <p class="lede page-header__lede">Every celebration is different. We discuss your wedding, understand what matters most, and design coverage around the actual day.</p>
+        <div class="section-inner flow">
+          <p class="eyebrow">What We Offer</p>
+          <h1 id="services-title"><em>Coverage for the day</em><br>you are building.</h1>
+          <p class="lede page-header__lede">Every celebration has its own cadence. We converse with you months prior to understand your family rhythms, venue architecture, and personal priorities.</p>
+        </div>
       </section>
-
-      <aside class="demo-notice" aria-label="Prototype content notice">
-        <p><strong>Prototype preview.</strong> Services and descriptions below are illustrative. Final offerings, inclusions, and pricing will be confirmed with the studio before launch.</p>
-      </aside>
 
       <!-- Services List -->
-      <section class="section services-section" aria-labelledby="services-list-title">
-        <h2 id="services-list-title" class="sr-only">Available services</h2>
+      <section class="section services-section" aria-labelledby="services-list-title" style="padding-block-start: 0;">
+        <div class="section-inner flow">
+          <h2 id="services-list-title" class="sr-only">Available services</h2>
 
-        <div class="service-row" id="service-photography">
-          <div class="service-row__media">
-            <img src="assets/images/stories/demo-bride-haveli.jpg" alt="Demo editorial portrait of a bride — illustrating wedding photography." width="800" height="533" loading="lazy" />
+          <!-- Service 1: Photography -->
+          <div class="service-row" id="service-photography">
+            <div class="service-row__media">
+              <img src="assets/images/bride/bride-portrait-eyes-open.jpg" alt="Bridal portrait under red veil illustrating documentary wedding photography." width="800" height="1067" loading="lazy" />
+            </div>
+            <div class="service-row__copy flow">
+              <p class="eyebrow" style="color: var(--color-gold);">Commission 01</p>
+              <h2 class="service-row__title">Editorial Wedding Photography</h2>
+              <p>Documentary and fine art coverage of your complete wedding celebration — from private morning rituals through to midnight festivities. We seek what is real, quiet, and sacred rather than directing poses.</p>
+              <ul class="service-includes" aria-label="What is included">
+                <li>Multi-day &amp; full-day coverage by principal directors</li>
+                <li>Comprehensive bridal portraiture and family documentation</li>
+                <li>Private, password-protected online client gallery</li>
+                <li>High-resolution archival master files delivered on custom drive</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Inquire about photography <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <div class="service-row__copy flow">
-            <p class="eyebrow">01</p>
-            <h2 class="service-row__title">Wedding photography</h2>
-            <p>Documentary and editorial coverage of your wedding day — from the morning preparations through the late evening celebrations. We document what is real, not what is posed.</p>
-            <ul class="service-includes" aria-label="What is included">
-              <li>Full-day or partial-day coverage</li>
-              <li>Curated high-resolution gallery</li>
-              <li>Online gallery delivery</li>
-              <li>Archival digital files</li>
-            </ul>
-            <a class="text-link" href="inquiry.html">Inquire about photography <span aria-hidden="true">↗</span></a>
+
+          <!-- Service 2: Cinematography -->
+          <div class="service-row service-row--reversed" id="service-cinematography">
+            <div class="service-row__media">
+              <img src="assets/images/stories/demo-reception-night.jpg" alt="Reception dance under fairy lights illustrating cinematic wedding films." width="1280" height="853" loading="lazy" />
+            </div>
+            <div class="service-row__copy flow">
+              <p class="eyebrow" style="color: var(--color-gold);">Commission 02</p>
+              <h2 class="service-row__title">Cinematic Wedding Storytelling</h2>
+              <p>Films created with the same artistic restraint we bring to still photographs. We capture authentic audio, dialogue, and laughter, composing a cinematic document that mirrors the day’s actual emotional gravity.</p>
+              <ul class="service-includes" aria-label="What is included">
+                <li>Director's Cut Highlight Film (5–8 minutes, 4K Cinema)</li>
+                <li>Feature Documentary Film (30–60 minutes full ceremony &amp; speeches)</li>
+                <li>Multi-track high-fidelity spatial audio mastering</li>
+                <li>Color grading crafted in DaVinci Resolve</li>
+              </ul>
+              <a class="text-link" href="films.html">Explore our wedding films <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+
+          <!-- Service 3: Pre-Wedding -->
+          <div class="service-row" id="service-prewedding">
+            <div class="service-row__media">
+              <img src="assets/images/stories/demo-couple-garden.jpg" alt="Couple walking through palace courtyard at twilight illustrating pre-wedding portraits." width="800" height="1000" loading="lazy" />
+            </div>
+            <div class="service-row__copy flow">
+              <p class="eyebrow" style="color: var(--color-gold);">Commission 03</p>
+              <h2 class="service-row__title">Pre-Wedding Journals &amp; Films</h2>
+              <p>An unhurried portrait session before the wedding day — at a historic haveli, ancestral home, or destination landscape. A chance to be photographed together without the ticking clock of wedding rituals.</p>
+              <ul class="service-includes" aria-label="What is included">
+                <li>Half-day or full-day location portraiture</li>
+                <li>Optional short cinematic prologue film (2–3 minutes)</li>
+                <li>Creative moodboard and architectural location scouting</li>
+                <li>Editorial styling recommendations</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Plan a pre-wedding journal <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <!-- Service 4: Destination -->
+          <div class="service-row service-row--reversed" id="service-destination">
+            <div class="service-row__media">
+              <img src="assets/images/stories/demo-destination-landscape.jpg" alt="Destination wedding at hilltop fortress illustrating destination coverage." width="1600" height="900" loading="lazy" />
+            </div>
+            <div class="service-row__copy flow">
+              <p class="eyebrow" style="color: var(--color-gold);">Commission 04</p>
+              <h2 class="service-row__title">Destination Wedding Collections</h2>
+              <p>We accompany couples worldwide. Whether your vows take place along Rajasthan's royal lakes, Goa's coastline, or an Italian villa, our production team handles all international travel logistics seamlessly.</p>
+              <ul class="service-includes" aria-label="What is included">
+                <li>All-inclusive multi-day domestic and international coverage</li>
+                <li>Pre-wedding welcome party &amp; rehearsal dinner coverage</li>
+                <li>Complete crew travel, carnets, and equipment insurance managed</li>
+                <li>On-site reconnaissance 24–48 hours prior to ceremonies</li>
+              </ul>
+              <a class="text-link" href="travel.html">Explore our travel schedule <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <!-- Service 5: Heirloom Albums -->
+          <div class="service-row" id="service-albums">
+            <div class="service-row__media">
+              <img src="assets/images/bride/bride-mirror-portrait-two.jpg" alt="Bride in candlelit twilight room illustrating heirloom printed album curation." width="800" height="1067" loading="lazy" />
+            </div>
+            <div class="service-row__copy flow">
+              <p class="eyebrow" style="color: var(--color-gold);">Commission 05</p>
+              <h2 class="service-row__title">Heirloom Handcrafted Albums</h2>
+              <p>Photographs are meant to be touched, turned, and handed down across generations. Our albums are individually curated, printed on museum-grade fine art cotton rag paper, and bound by master bookbinders.</p>
+              <ul class="service-includes" aria-label="What is included">
+                <li>Custom linen, Japanese silk, or vegetable-tanned leather bindings</li>
+                <li>Archival pigment printing on 100% cotton rag paper</li>
+                <li>Handcrafted clamshell presentation boxes</li>
+                <li>Parent &amp; family duplicate gift editions</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Inquire about heirloom albums <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
         </div>
-
-        <div class="service-row service-row--reversed" id="service-cinematography">
-          <div class="service-row__media">
-            <img src="assets/images/stories/demo-reception-night.jpg" alt="Demo couple dancing at a palace reception — illustrating wedding cinematography." width="1280" height="853" loading="lazy" />
-          </div>
-          <div class="service-row__copy flow">
-            <p class="eyebrow">02</p>
-            <h2 class="service-row__title">Wedding cinematography</h2>
-            <p>A wedding film made with the same attention we bring to the photographs. Honest audio, considered pacing, and the movement between the moments — not a music video, but a document of how the day actually felt.</p>
-            <ul class="service-includes" aria-label="What is included">
-              <li>Highlight film (four to seven minutes)</li>
-              <li>Full ceremony and speech recordings on request</li>
-              <li>Synchronized audio capture</li>
-              <li>Digital delivery in high resolution</li>
-            </ul>
-            <a class="text-link" href="films.html">View wedding films <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
-        <div class="service-row" id="service-prewedding">
-          <div class="service-row__media">
-            <img src="assets/images/stories/demo-couple-garden.jpg" alt="Demo couple in a palace garden at dusk — illustrating pre-wedding photography." width="800" height="1000" loading="lazy" />
-          </div>
-          <div class="service-row__copy flow">
-            <p class="eyebrow">03</p>
-            <h2 class="service-row__title">Pre-wedding photography &amp; films</h2>
-            <p>A session before the wedding — in a location meaningful to you, or at the venue itself. A way to be photographed together without the ceremony's weight, and a way for us to understand how you move together.</p>
-            <ul class="service-includes" aria-label="What is included">
-              <li>Two-to-three-hour photography session</li>
-              <li>Optional short film edit</li>
-              <li>Location guidance and creative direction</li>
-              <li>Curated gallery delivery</li>
-            </ul>
-            <a class="text-link" href="inquiry.html">Inquire about a pre-wedding session <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
-        <div class="service-row service-row--reversed" id="service-destination">
-          <div class="service-row__media">
-            <img src="assets/images/stories/demo-destination-landscape.jpg" alt="Demo destination wedding at hilltop palace — illustrating destination coverage." width="1600" height="900" loading="lazy" />
-          </div>
-          <div class="service-row__copy flow">
-            <p class="eyebrow">04</p>
-            <h2 class="service-row__title">Destination wedding coverage</h2>
-            <p>We travel. Whether the wedding is at a Rajasthan fort, a Goa beach house, or a venue abroad, coverage can be arranged around your date and location. Travel logistics and coverage will be confirmed in conversation.</p>
-            <ul class="service-includes" aria-label="What is included">
-              <li>Multi-day coverage available</li>
-              <li>Photography and cinematography combination</li>
-              <li>Travel logistics discussed at inquiry</li>
-              <li>Location scouting where useful</li>
-            </ul>
-            <a class="text-link" href="inquiry.html">Plan your destination wedding <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
-        <div class="service-row" id="service-albums">
-          <div class="service-row__media">
-            <img src="assets/images/stories/demo-mehndi-hands.jpg" alt="Demo bridal mehndi detail — illustrating wedding albums." width="800" height="1200" loading="lazy" />
-          </div>
-          <div class="service-row__copy flow">
-            <p class="eyebrow">05</p>
-            <h2 class="service-row__title">Wedding albums</h2>
-            <p>A curated selection of photographs from your wedding day, designed and printed as a physical heirloom. Album specifications, paper choices, and binding will be confirmed with the studio.</p>
-            <ul class="service-includes" aria-label="What is included">
-              <li>Album design and layout curation</li>
-              <li>Print and binding options discussed at inquiry</li>
-              <li>Delivered to your address</li>
-            </ul>
-            <a class="text-link" href="inquiry.html">Inquire about albums <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
       </section>
 
-      <!-- Pricing Note -->
-      <section class="section services-pricing-note" aria-labelledby="pricing-note-title">
-        <div class="pricing-note flow">
-          <h2 id="pricing-note-title">A note on pricing.</h2>
-          <p>Pricing depends on your wedding's date, location, coverage duration, and specific requirements. We do not publish fixed packages because most weddings need a bespoke conversation. Use the inquiry form to share your details and we'll prepare a proposal based on your actual day.</p>
-          <a class="button button--ink" href="inquiry.html">Request a proposal</a>
+      <!-- CTA Section -->
+      <section class="section cta-section" aria-labelledby="services-cta-title">
+        <div class="cta-section__inner flow">
+          <p class="eyebrow">Custom Tailored Packages</p>
+          <h2 id="services-cta-title">Let us design your coverage.</h2>
+          <p class="lede">No two celebrations share the same schedule. Reach out to discuss multi-day combinations of photography and cinematography tailored specifically to your plans.</p>
+          <div class="cta-section__actions">
+            <a class="button button--gold" href="inquiry.html">Request a bespoke quote</a>
+            <a class="text-link" href="portfolio.html">View photography portfolio <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
 
     </main>
 
+    <!-- Site Footer -->
     <footer class="site-footer" aria-label="Site footer">
       <div class="site-footer__inner">
         <div class="site-footer__brand">
-          <a class="wordmark" href="index.html">Pagphera</a>
+          <a class="wordmark" href="index.html" aria-label="Pagphera — return to home">Pagphera</a>
           <p>Photography and cinematography for celebrations with a story to tell.</p>
+          <div class="footer-social" aria-label="Follow us">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
         </div>
         <nav class="site-footer__nav" aria-label="Footer navigation">
           <div class="footer-nav-group">
             <h3 class="footer-nav-group__label">Work</h3>
-            <ul><li><a href="portfolio.html">Stories</a></li><li><a href="films.html">Films</a></li><li><a href="services.html">Services</a></li></ul>
+            <ul>
+              <li><a href="portfolio.html">Photography</a></li>
+              <li><a href="films.html">Films</a></li>
+              <li><a href="stories.html">Stories</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h3 class="footer-nav-group__label">More</h3>
+            <ul>
+              <li><a href="services.html" aria-current="page">Services</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="travel.html">Travel</a></li>
+            </ul>
           </div>
           <div class="footer-nav-group">
             <h3 class="footer-nav-group__label">Studio</h3>
-            <ul><li><a href="about.html">About</a></li><li><a href="inquiry.html">Inquire</a></li></ul>
-          </div>
-          <div class="footer-nav-group">
-            <h3 class="footer-nav-group__label">Legal</h3>
-            <ul><li><a href="privacy-policy.html">Privacy policy</a></li><li><a href="cookie-policy.html">Cookie policy</a></li><li><a href="terms.html">Terms of use</a></li></ul>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="inquiry.html">Contact Us</a></li>
+              <li><a href="privacy-policy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of use</a></li>
+            </ul>
           </div>
         </nav>
         <div class="site-footer__bottom">
-          <p class="site-footer__note">Prototype website — business details to be confirmed before launch.</p>
-          <button class="text-link cookie-settings-trigger" type="button" id="cookie-settings-trigger">Cookie settings</button>
-          <a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+          <p class="site-footer__note">Prototype website — business details, contact information, and social links will be confirmed before launch.</p>
+          <button class="text-link cookie-settings-trigger" type="button" id="cookie-settings-trigger" aria-label="Manage cookie preferences">Cookie settings</button>
+          <a class="text-link" href="#top" aria-label="Back to top">Back to top <span aria-hidden="true">↑</span></a>
         </div>
       </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
     <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie consent" aria-live="polite" hidden>
       <div class="cookie-banner__inner">
         <div class="cookie-banner__copy">
           <p><strong>Cookie preferences</strong></p>
-          <p>We use strictly necessary cookies for this site to function. With your consent, we may also use analytics cookies.</p>
-          <a href="cookie-policy.html" class="text-link">Cookie policy <span aria-hidden="true">↗</span></a>
+          <p>We use strictly necessary cookies for this site to function. With your consent, we may also use analytics cookies to understand how visitors use the site. <a href="cookie-policy.html">Cookie policy ↗</a></p>
         </div>
         <div class="cookie-banner__actions">
-          <button class="button button--ink" type="button" id="cookie-accept-all">Accept all</button>
+          <button class="button button--gold" type="button" id="cookie-accept-all">Accept all</button>
           <button class="button button--outline" type="button" id="cookie-reject-optional">Necessary only</button>
           <button class="button button--ghost-sm" type="button" id="cookie-open-prefs">Manage preferences</button>
         </div>
       </div>
     </div>
 
+    <!-- Cookie Preferences Dialog -->
     <dialog class="cookie-dialog" id="cookie-dialog" aria-labelledby="cookie-dialog-title">
       <div class="cookie-dialog__inner">
         <div class="cookie-dialog__header">
@@ -210,25 +285,31 @@
         <div class="cookie-dialog__body">
           <div class="cookie-category">
             <div class="cookie-category__header">
-              <div><h3 class="cookie-category__name">Strictly necessary</h3><p class="cookie-category__desc">Required for the site to function. Cannot be disabled.</p></div>
-              <span class="cookie-toggle cookie-toggle--always-on">Always on</span>
+              <div>
+                <h3 class="cookie-category__name">Strictly necessary</h3>
+                <p class="cookie-category__desc">Required for the site to function. Cannot be disabled.</p>
+              </div>
+              <span class="cookie-toggle cookie-toggle--always-on" aria-label="Always active">Always on</span>
             </div>
           </div>
           <div class="cookie-category">
             <div class="cookie-category__header">
-              <div><h3 class="cookie-category__name">Analytics</h3><p class="cookie-category__desc">Helps us understand how visitors use the site so we can improve it.</p></div>
-              <label class="cookie-toggle"><input type="checkbox" id="pref-analytics" name="analytics" /><span class="cookie-toggle__track" aria-hidden="true"></span></label>
+              <div>
+                <h3 class="cookie-category__name">Analytics</h3>
+                <p class="cookie-category__desc">Helps us understand how visitors use the site. No personal data sold or shared.</p>
+              </div>
+              <label class="cookie-toggle" aria-label="Toggle analytics cookies">
+                <input type="checkbox" id="pref-analytics" name="analytics" />
+                <span class="cookie-toggle__track" aria-hidden="true"></span>
+              </label>
             </div>
           </div>
         </div>
         <div class="cookie-dialog__footer">
-          <button class="button button--ink" type="button" id="cookie-save-prefs">Save preferences</button>
+          <button class="button button--gold" type="button" id="cookie-save-prefs">Save preferences</button>
         </div>
       </div>
     </dialog>
 
-    <script src="assets/js/navigation.js" defer></script>
-    <script src="assets/js/cookie-consent.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
   </body>
 </html>

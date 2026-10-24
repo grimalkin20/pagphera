@@ -1,41 +1,49 @@
 :root {
   color-scheme: light;
 
-  --color-peach: #ffdab9;
-  --color-peach-soft: #fad0c4;
-  --color-cream: #fffdf9;
-  --color-ink: #111111;
-  --color-charcoal: #222222;
-  --color-white: #ffffff;
-  --color-night: #171513;
-  --color-muted: #67615c;
-  --color-line: #d8d0c9;
-  --color-focus: #075a79;
+  /* ── Palette (inspired by HOTC warm editorial) ── */
+  --color-bg:      #ede8df;   /* warm parchment — main background */
+  --color-cream:   #f5f0e8;   /* slightly lighter, alternate bg */
+  --color-white:   #ffffff;
+  --color-ink:     #1a1714;   /* near-black warm */
+  --color-charcoal:#2e2b28;
+  --color-muted:   #7a7168;
+  --color-line:    #cbc4b8;
+  --color-gold:    #8b7d55;   /* HOTC olive-gold accent */
+  --color-gold-btn:#8b7d55;
+  --color-night:   #131110;
+  --color-focus:   #075a79;
 
+  /* ── Typography ── */
   --font-display: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
+  /* ── Type scale ── */
+  --text-xs:   0.7rem;
+  --text-sm:   0.8125rem;
   --text-base: 1rem;
-  --text-md: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
-  --text-lg: clamp(1.5rem, 1.25rem + 1.4vw, 2.5rem);
-  --text-xl: clamp(2.6rem, 1.8rem + 4vw, 6.2rem);
+  --text-md:   clamp(1.0625rem, 0.95rem + 0.5vw, 1.3125rem);
+  --text-lg:   clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --text-xl:   clamp(3rem, 2rem + 5vw, 7.5rem);
+  --text-hero: clamp(3.5rem, 2rem + 8vw, 10rem);
 
-  --space-1: 0.5rem;
-  --space-2: 0.75rem;
+  /* ── Spacing ── */
+  --space-1: 0.375rem;
+  --space-2: 0.625rem;
   --space-3: 1rem;
   --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --space-7: clamp(4rem, 6vw, 7rem);
-  --space-8: clamp(6rem, 12vw, 12rem);
+  --space-5: 2.25rem;
+  --space-6: 3.5rem;
+  --space-7: clamp(4.5rem, 7vw, 8rem);
+  --space-8: clamp(7rem, 14vw, 14rem);
 
-  --content-max: 75rem;
-  --wide-max: 100rem;
-  --page-gutter: clamp(1.25rem, 4vw, 4rem);
-  --radius-none: 0;
-  --duration-fast: 160ms;
-  --duration-base: 300ms;
+  /* ── Layout ── */
+  --content-max:   76rem;
+  --wide-max:      100rem;
+  --page-gutter:   clamp(1.25rem, 4vw, 3.5rem);
+
+  /* ── Motion ── */
+  --duration-fast: 140ms;
+  --duration-base: 280ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

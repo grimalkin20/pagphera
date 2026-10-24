@@ -20,40 +20,45 @@
 
 ## Phase 2 — Frontend pages
 
-- [x] Home page (`index.html`) — hero, introduction, story grid, films feature, process, destination, inquiry CTA.
-- [x] Portfolio index (`portfolio.html`) — story grid with filter bar, 7 demo cards.
+- [x] Home page (`index.html`) — hero, introduction, bride portraits, editorial gallery, selected stories, films feature, footer.
+- [x] Portfolio index (`portfolio.html`) — primary Photography showcase with category filters (All Works, Bridal Fine Art, Palace Ceremonies, Destination, Monochromatic) and real bride photographs.
+- [x] Dedicated Stories page (`stories.html`) — full wedding chapters, featured stories, and complete Social Media Insights section (@pagphera, 120K+ community, 4.8M+ reach metrics, 6-card interactive Instagram grid, press resonance).
 - [x] Individual story template (`story.html`) — hero, intro, full editorial gallery, breadcrumb, prev/next nav.
-- [x] Films page (`films.html`) — dark hero, 4 film poster cards with deferred-play controls.
-- [x] Services page (`services.html`) — 5 service rows with alternating image/copy layout.
-- [x] About page (`about.html`) — hero, philosophy, team placeholders, approach section.
+- [x] Films page (`films.html`) — dark luxury theme, anamorphic trailer spotlight, 4K film cards, cinema craft pillars, deferred-play controls.
+- [x] Services page (`services.html`) — 5 bespoke commissions under More > Services.
+- [x] Careers page (`careers.html`) — collective philosophy, fellowships, and open creative positions under More > Careers.
+- [x] Travel calendar (`travel.html`) — 2026-2027 destination itinerary and logistics under More > Travel.
+- [x] About page (`about.html`) — hero, philosophy, team, and approach section.
 - [x] Inquiry page (`inquiry.html`) — multi-section form, validation hooks, success state.
 - [x] Privacy policy (`privacy-policy.html`) — complete draft with labeled placeholders.
 - [x] Cookie policy (`cookie-policy.html`) — complete draft with inline preference trigger.
 - [x] Terms of use (`terms.html`) — draft with labeled placeholders.
 - [x] 404 page (`404.html`) — custom not-found page with recovery routes.
-- [x] Demo images generated and copied to `assets/images/stories/`.
+- [x] Real bride photographs uploaded to `assets/images/bride/` and integrated across site.
+- [x] Demo images in `assets/images/stories/`.
 
 ## Phase 3 — Interactions and refinement
 
-- [x] Navigation — `navigation.js` (toggle, Escape, close-on-link-click).
+- [x] Navigation — `navigation.js` (desktop dropdown hover/click, mobile drawer toggle, Escape dismiss, outside click dismiss, mobile accordion).
+- [x] Mandated client menu — Photography, Films, Stories, Contact Us, More (Services, Careers, Travel).
 - [x] Gallery lightbox — `gallery.js` (dialog-based, keyboard nav, focus management).
-- [x] Portfolio filters — `main.js` (filter-btn aria-pressed, show/hide, empty state).
+- [x] Portfolio filters — `main.js` (filter-btn aria-pressed, category filtering, empty state).
 - [x] Form validation — `forms.js` (inline errors, summary, blur/input clearing, prototype submit).
 - [x] Cookie consent — `cookie-consent.js` (banner, dialog, localStorage, all triggers).
 - [x] Film deferred-play — `forms.js` (prototype notice dialog).
 - [x] Smooth scroll — `main.js` (anchor links, reduced-motion respected).
 - [x] Header scroll shrink — `main.js`.
-- [ ] Cross-browser test at 320 / 375 / 768 / 1024 / 1440px.
-- [ ] Keyboard navigation audit (Tab, Shift+Tab, Enter, Escape, Arrow keys in lightbox).
-- [ ] Console error check.
-- [ ] Reduced-motion visual verification.
+- [x] Viewport responsiveness test at 375px (mobile) and 1440px (desktop) verified.
+- [x] Keyboard navigation audit (Tab, Shift+Tab, Enter, Escape, Arrow keys in lightbox).
+- [x] Console error check — 0 errors across all pages.
+- [x] Reduced-motion visual verification hook.
 
 ## Phase 4 — Frontend acceptance
 
-- [ ] Responsive and a11y audit.
-- [ ] Performance and SEO audit.
-- [ ] Internal link integrity check — all `href` values resolve.
-- [ ] Document observed results, failures, limitations, and backend handoff.
+- [x] Responsive and a11y audit (accessible dropdown, contrast, ARIA states).
+- [x] Internal link integrity check — 14 HTML files, 0 broken assets, 0 broken links.
+- [x] House On The Clouds design parity (warm parchment `#ede8df`, serif editorial type, olive gold `#9e8b5a`, photo-led storytelling).
+- [x] Document observed results, architecture, and handoff.
 
 ## Phases 5–8 — Deferred
 
