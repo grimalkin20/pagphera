@@ -10,6 +10,7 @@
 
   const setMenuState = (isOpen) => {
     header.dataset.menuOpen = String(isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
     toggle.setAttribute(
       'aria-label',

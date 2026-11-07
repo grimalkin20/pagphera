@@ -1,17 +1,16 @@
 /**
  * forms.js — Client-side validation for the inquiry form.
  *
- * PROTOTYPE NOTE: This form does not submit to a real endpoint.
+ * This form does not submit to a real endpoint.
  * Validation runs on submit. Errors are displayed inline and in a summary.
- * On "success" (all validation passes in prototype), a success state is shown.
+ * Valid inquiries are not submitted until a submission service is connected.
  */
 
 (() => {
   const form = document.getElementById('inquiry-form');
-  const successPanel = document.getElementById('form-success');
+  const submissionNotice = document.getElementById('form-submit-status');
   const errorSummary = document.getElementById('form-error-summary');
   const errorList = document.getElementById('error-summary-list');
-  const submitBtn = document.getElementById('inquiry-submit');
 
   if (!form) return;
 
@@ -166,23 +165,10 @@
       return;
     }
 
-    // All validation passed — simulate submission for prototype
-    if (submitBtn) {
-      const label = submitBtn.querySelector('.button-label');
-      const loading = submitBtn.querySelector('.button-loading');
-      submitBtn.disabled = true;
-      if (label) label.hidden = true;
-      if (loading) loading.hidden = false;
+    if (submissionNotice) {
+      submissionNotice.textContent = 'Your inquiry has not been sent or saved. The submission service is not connected yet.';
+      submissionNotice.focus();
     }
-
-    // Simulate async submission
-    setTimeout(() => {
-      form.hidden = true;
-      if (successPanel) {
-        successPanel.hidden = false;
-        successPanel.focus();
-      }
-    }, 1200);
   });
 
   // ── Film notice dialog (films.html) ───────────────────────────────────────
@@ -195,7 +181,7 @@
     document.addEventListener('click', (e) => {
       const playBtn = e.target.closest('[data-film-notice]');
       if (!playBtn) return;
-      const notice = playBtn.dataset.filmNotice || 'This is a prototype. Video is not connected.';
+      const notice = playBtn.dataset.filmNotice || 'Film playback is not available yet. Please contact the studio for viewing information.';
       if (filmNoticeBody) filmNoticeBody.textContent = notice;
       filmNoticeDialog.showModal();
     });

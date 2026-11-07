@@ -2,7 +2,7 @@
  * cookie-consent.js — Cookie preference management.
  * 
  * Stores preferences in localStorage. Does NOT use a cookie for consent storage
- * in this prototype (avoids a chicken-and-egg consent problem).
+ * in this site (avoids a chicken-and-egg consent problem).
  * 
  * Preference schema stored as JSON in localStorage key 'pagphera_consent':
  * {
@@ -12,7 +12,7 @@
  *   analytics: boolean
  * }
  * 
- * PROTOTYPE NOTE: Analytics scripts are not actually loaded in this build.
+ * Analytics scripts are not loaded in this build.
  * The consent infrastructure is in place for future integration.
  */
 
@@ -66,7 +66,7 @@
     // In a real build, this is where you would conditionally load analytics scripts.
     // Example (do NOT implement without backend integration):
     // if (prefs.analytics) loadAnalytics();
-    // For the prototype, we just log the decision.
+    // Record that the preference controls were updated.
     if (typeof console !== 'undefined') {
       console.info('[Pagphera consent] Preferences applied:', prefs);
     }
