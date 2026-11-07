@@ -7,6 +7,8 @@
 @media (min-width: 40rem) {
   .story-grid { grid-template-columns: repeat(2, 1fr); }
 
+  .career-role-card { grid-template-columns: minmax(0, 1fr) auto; }
+
   .instagram-grid { grid-template-columns: repeat(4, 1fr); }
 
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
@@ -26,6 +28,9 @@
 
   /* Intro section — heading left, copy right */
   .intro-section__inner { grid-template-columns: 1fr 1fr; align-items: start; gap: var(--space-8); }
+
+  .about-story-grid,
+  .story-narrative-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   /* Process section — 3 columns approach items */
   .about-approach__items { grid-template-columns: repeat(3, 1fr); }
@@ -56,6 +61,113 @@
 }
 
 /* ── Desktop navigation ≥ 1024px ────────────────────────────────────────── */
+
+/* Mobile header layout: hamburger left, logo centered */
+@media (max-width: 63.99rem) {
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    color: #131110 !important;
+    padding: 0;
+    min-block-size: 2.75rem;
+    z-index: 10;
+  }
+
+  .wordmark {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+  }
+
+  .nav-cluster {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+  }
+
+  /* Hide the GET IN TOUCH button on mobile within nav-cluster */
+  .nav-cluster .button--gold {
+    display: none;
+  }
+
+  /* Mobile site-header overlaying hero on index page */
+  body.home-page .site-header,
+  body:has(.home-hero) .site-header {
+    background: transparent;
+    border-block-end: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  body.home-page .site-header .wordmark,
+  body:has(.home-hero) .site-header .wordmark {
+    color: #f5f0e8 !important;
+    text-shadow: 0 1px 8px rgba(0 0 0 / 0.4);
+  }
+
+  /* When scrolled or menu open on index, restore header background and dark wordmark */
+  body.home-page .site-header.site-header--scrolled,
+  body.home-page .site-header[data-menu-open="true"],
+  body:has(.home-hero) .site-header.site-header--scrolled,
+  body:has(.home-hero) .site-header[data-menu-open="true"] {
+    background: rgba(237 232 223 / 0.98) !important;
+    border-block-end: 1px solid var(--color-line) !important;
+    position: sticky;
+  }
+
+  body.home-page .site-header.site-header--scrolled .wordmark,
+  body.home-page .site-header[data-menu-open="true"] .wordmark,
+  body:has(.home-hero) .site-header.site-header--scrolled .wordmark,
+  body:has(.home-hero) .site-header[data-menu-open="true"] .wordmark {
+    color: var(--color-ink) !important;
+    text-shadow: none;
+  }
+
+  .menu-toggle__icon,
+  .menu-toggle__icon::before,
+  .menu-toggle__icon::after {
+    background: #131110 !important;
+  }
+}
+
+/* Mobile footer layout */
+@media (max-width: 47.99rem) {
+  .site-footer__inner {
+    padding-block: var(--space-6);
+    gap: var(--space-6);
+  }
+
+  .site-footer__brand {
+    text-align: left;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6) var(--space-4);
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .site-footer__note {
+    font-size: var(--text-xs);
+    line-height: 1.5;
+  }
+}
 
 @media (min-width: 64rem) {
 

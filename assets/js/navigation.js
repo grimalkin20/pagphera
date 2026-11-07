@@ -11,10 +11,10 @@
   const setMenuState = (isOpen) => {
     header.dataset.menuOpen = String(isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
-    const label = toggle.querySelector('.menu-toggle__label');
-    if (label) {
-      label.textContent = isOpen ? 'Close' : 'Menu';
-    }
+    toggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation menu' : 'Open navigation menu'
+    );
     if (!isOpen) {
       closeAllDropdowns();
     }

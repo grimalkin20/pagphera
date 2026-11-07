@@ -81,4 +81,22 @@
       target.focus({ preventScroll: true });
     });
   }
+
+  // ── Floating Scroll-to-Top Button ─────────────────────────────────────────
+
+  const scrollTopBtn = document.getElementById('scroll-to-top');
+  if (scrollTopBtn) {
+    const toggleScrollBtn = () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+    };
+    window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+    toggleScrollBtn();
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  }
 })();
