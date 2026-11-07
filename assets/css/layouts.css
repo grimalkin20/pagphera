@@ -802,57 +802,45 @@
 
 /* ── Photography page / Portfolio ────────────────────────────────────────── */
 
-.portfolio-page { }
-
-.portfolio-filter-bar {
+.portfolio-filter-section {
   border-block-end: 1px solid var(--color-line);
-  padding-block: var(--space-4);
-  padding-inline: var(--page-gutter);
-  text-align: center;
+  max-inline-size: var(--wide-max);
+  padding-block: var(--space-3);
 }
-
-.portfolio-filter-inner {
+.portfolio-filter-section .section-inner,
+.portfolio-grid-section .section-inner {
+  max-inline-size: none;
+  padding-inline: 0;
+}
+.filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
+  gap: var(--space-2);
   justify-content: center;
   margin-inline: auto;
-  max-inline-size: var(--content-max);
+  max-inline-size: none;
 }
 
-/* Pipe-separated HOTC style filter: Select: All | International | Indian */
-.portfolio-filter-inner .filter-sep {
-  color: var(--color-line);
-  padding-inline: var(--space-2);
+.portfolio-filter-section .filter-btn {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1.35;
+  min-block-size: 2.75rem;
+  text-align: center;
+  white-space: nowrap;
 }
-
-.portfolio-filter-btn {
-  background: none;
-  border: none;
-  color: var(--color-muted);
-  cursor: pointer;
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: var(--space-1) var(--space-2);
-  text-decoration: none;
-  text-transform: none;
-  transition: color var(--duration-fast) var(--ease-out);
-}
-.portfolio-filter-btn:hover { color: var(--color-ink); }
-.portfolio-filter-btn--active,
-.portfolio-filter-btn[aria-pressed="true"] { color: var(--color-ink); font-weight: 700; font-style: normal; }
 
 /* Portfolio grid — card with title below */
-.portfolio-grid {
-  display: grid;
-  gap: 2.5rem;
-  grid-template-columns: 1fr;
+.portfolio-grid-section {
+  max-inline-size: var(--wide-max);
+  padding-block: var(--space-5) var(--space-7);
+}
+.story-grid--portfolio {
+  gap: clamp(1.25rem, 2vw, 2rem);
+  grid-template-columns: minmax(0, 1fr);
   margin-inline: auto;
   max-inline-size: var(--wide-max);
-  padding: var(--space-7) var(--page-gutter);
 }
 
 .portfolio-card { display: grid; gap: var(--space-3); }
