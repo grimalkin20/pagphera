@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#ede8df" />
   <meta property="og:title" content="Services &amp; Offerings — Pagphera" />
   <meta property="og:description"
-    content="Bespoke wedding photography, cinematic 4K films, pre-wedding journals, destination celebrations, and handcrafted heirloom albums." />
+    content="Wedding photography and films, pre-wedding portraits, destination celebrations, and heirloom albums." />
   <meta property="og:type" content="website" />
   <title>Services &amp; Offerings — Pagphera</title>
   <link rel="icon" href="assets/images/favicon.ico" type="image/svg+xml" />
@@ -28,30 +28,51 @@
   <script src="assets/js/cookie-consent.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <style>
+    .services-masthead {
+      align-items: center;
+      display: grid;
+      gap: var(--space-6);
+      margin-inline: auto;
+      max-inline-size: var(--wide-max);
+      padding: var(--space-7) var(--page-gutter);
+    }
+    .services-masthead__copy {
+      --flow-space: var(--space-4);
+      max-inline-size: 42rem;
+    }
+    .services-masthead h1 {
+      font-size: clamp(3rem, 2rem + 6vw, 7rem);
+      letter-spacing: -0.055em;
+      line-height: 0.98;
+      max-inline-size: 10ch;
+    }
+    .services-masthead__lede {
+      color: var(--color-muted);
+      max-inline-size: 48ch;
+    }
+    .services-masthead__media {
+      aspect-ratio: 4 / 5;
+      margin: 0;
+      overflow: hidden;
+    }
+    .services-masthead__media img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      width: 100%;
+    }
     .services-overview-grid {
       display: grid;
       gap: var(--space-7);
       margin-block-start: var(--space-6);
     }
     .service-detail-card {
-      background: var(--color-cream);
-      border: 1px solid var(--color-line);
-      display: grid;
-      gap: var(--space-6);
-      padding: var(--space-6);
       align-items: center;
-    }
-    @media (min-width: 52rem) {
-      .service-detail-card {
-        grid-template-columns: 1fr 1.1fr;
-        padding: var(--space-7);
-      }
-      .service-detail-card--reversed .service-detail-card__media {
-        order: 2;
-      }
-      .service-detail-card--reversed .service-detail-card__content {
-        order: 1;
-      }
+      border-block-start: 1px solid var(--color-line);
+      display: grid;
+      gap: var(--space-5);
+      padding-block-start: var(--space-5);
     }
     .service-detail-card__media {
       aspect-ratio: 4 / 3;
@@ -60,75 +81,136 @@
       width: 100%;
     }
     .service-detail-card__media img {
-      width: 100%;
+      display: block;
       height: 100%;
       object-fit: cover;
-      display: block;
+      width: 100%;
+    }
+    .service-detail-card__content {
+      --flow-space: var(--space-3);
+      padding-block: var(--space-3);
     }
     .service-detail-card__num {
+      color: var(--color-gold);
+      display: block;
       font-family: var(--font-display);
       font-size: var(--text-lg);
-      color: var(--color-gold);
       font-style: italic;
     }
     .service-detail-card__content h2 {
-      font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.4rem);
+      font-size: clamp(1.8rem, 1.3rem + 2vw, 3rem);
       margin-block: var(--space-2);
+      max-inline-size: 16ch;
+    }
+    .service-detail-card__content > p:not(.eyebrow) {
+      color: var(--color-muted);
+      max-inline-size: 50ch;
     }
     .service-detail-card__list {
-      list-style: none;
+      border-block-start: 1px solid var(--color-line);
       display: grid;
-      gap: 0.6rem;
+      gap: var(--space-2);
+      list-style: none;
       margin-block: var(--space-4);
-      padding: 0;
+      padding: var(--space-3) 0 0;
     }
     .service-detail-card__list li {
-      font-size: var(--text-sm);
+      align-items: baseline;
       display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      line-height: 1.5;
+      font-size: var(--text-sm);
+      gap: var(--space-2);
+      line-height: 1.55;
     }
     .service-detail-card__list li::before {
-      content: "✦";
       color: var(--color-gold);
-      font-size: 0.75rem;
-      margin-top: 0.2rem;
-      flex-shrink: 0;
+      content: "—";
+      flex: 0 0 auto;
+    }
+    .services-inclusions {
+      background: var(--color-cream);
+      border-block: 1px solid var(--color-line);
+    }
+    .services-inclusions__grid {
+      display: grid;
+      gap: var(--space-4);
+      margin-block-start: var(--space-5);
+    }
+    .services-inclusion {
+      border-block-start: 1px solid var(--color-line);
+      padding-block-start: var(--space-3);
+    }
+    .services-inclusion h3 {
+      font-size: var(--text-md);
+      margin-block-end: var(--space-2);
+    }
+    .services-inclusion p {
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+    .services-faq {
+      border-block-start: 1px solid var(--color-line);
+      margin-block-start: var(--space-5);
+    }
+    .services-faq details {
+      border-block-end: 1px solid var(--color-line);
+      padding-block: var(--space-3);
+    }
+    .services-faq summary {
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      list-style-position: outside;
+    }
+    .services-faq details p {
+      color: var(--color-muted);
+      margin-block-start: var(--space-3);
     }
     .process-timeline {
       display: grid;
-      gap: var(--space-6);
-      margin-block-start: var(--space-6);
-    }
-    @media (min-width: 48rem) {
-      .process-timeline {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      gap: var(--space-4);
+      margin-block-start: var(--space-5);
     }
     .process-step {
-      background: var(--color-cream);
-      border: 1px solid var(--color-line);
-      padding: var(--space-5);
+      border-block-start: 1px solid var(--color-line);
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-2);
+      padding-block-start: var(--space-3);
     }
     .process-step__num {
-      font-family: var(--font-display);
-      font-size: var(--text-xl);
       color: var(--color-gold);
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
       font-style: italic;
+    }
+    @media (min-width: 48rem) {
+      .services-masthead {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: var(--space-7);
+        min-block-size: min(48rem, 80svh);
+      }
+      .services-masthead__media { aspect-ratio: 5 / 4; }
+      .service-detail-card {
+        gap: var(--space-7);
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        padding-block-start: var(--space-6);
+      }
+      .service-detail-card--reversed {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      }
+      .service-detail-card--reversed .service-detail-card__media { order: 2; }
+      .service-detail-card--reversed .service-detail-card__content { order: 1; }
+      .service-detail-card__media { aspect-ratio: 5 / 4; }
+      .services-inclusions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .process-timeline { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (min-width: 70rem) {
+      .services-inclusions__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
   </style>
 </head>
 
 <body id="top">
   <a class="skip-link" href="#main-content">Skip to content</a>
-
-  <!-- Demo Notice -->
-  <aside class="demo-notice" aria-label="Prototype notice">
-    <p>Prototype preview — services and offerings below are illustrative demo offerings.</p>
-  </aside>
 
   <!-- Site Header -->
   <header class="site-header" data-site-header>
@@ -198,142 +280,212 @@
 
   <main id="main-content" tabindex="-1">
 
-    <!-- Page Header -->
-    <section class="page-header section" aria-labelledby="services-title">
-      <div class="section-inner flow">
-        <p class="eyebrow">The Sacred Craft &amp; Commissions</p>
-        <h1 id="services-title"><em>Services shaped with devotion,</em><br>etched in eternity.</h1>
-        <p class="lede page-header__lede">Inspired by the grand traditions of Indian celebrations and modern documentary cinema. From the holy chant of the saptapadi to the laughter echoing under the starlit reception, we offer complete visual guardianship of your wedding legacy.</p>
+    <section class="services-masthead" aria-labelledby="services-title">
+      <div class="services-masthead__copy flow">
+        <p class="eyebrow eyebrow--gold">Pagphera commissions <span aria-hidden="true">/</span> सेवा</p>
+        <h1 id="services-title">Your moments,<br><em>beautifully told.</em></h1>
+        <p class="lede services-masthead__lede">A considered collection of photography and films for weddings, family gatherings and the traditions that make them yours.</p>
+        <a class="text-link" href="#service-wedding-photography">Explore our commissions <span aria-hidden="true">↓</span></a>
+        <p class="services-masthead__caption eyebrow">Photography · Moving image · Heirloom</p>
       </div>
+      <figure class="services-masthead__media">
+        <img src="assets/images/groom-bride/groom_bride_ceil_pose_portrait_wide.jpg"
+          alt="A newlywed couple sharing a quiet moment together." width="1200" height="960" fetchpriority="high" />
+      </figure>
     </section>
 
     <!-- Services Overview Section -->
-    <section class="section" style="padding-block-start: 0;" aria-label="Our Services">
+    <section class="section service-commissions" id="service-commissions" style="padding-block-start: 0;" aria-label="Our Services">
       <div class="section-inner">
         <div class="services-overview-grid">
 
           <!-- 01. Wedding & Ritual Photography -->
           <article class="service-detail-card" id="service-wedding-photography">
             <div class="service-detail-card__media">
-              <img src="assets/images/groom-bride/groom_bride_wa_one.jpg" alt="Regal wedding portrait in traditional royal attire." loading="lazy" width="800" height="600" />
+              <img src="assets/images/groom-bride/groom_bride_wa_one.jpg" alt="A bride and groom in traditional wedding attire." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
               <span class="service-detail-card__num">01 / सेवा</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Vivah &amp; Traditional Ceremonies</p>
-              <h2>Wedding &amp; Sacred Ritual Photography</h2>
-              <p>Comprehensive documentary fine-art coverage honoring every Vedic ritual: the Solah Shringar, Haldi snan, Kanyadaan, and the Saat Phere around the holy agni. We observe without interference, capturing the sanctity and reverence of both families.</p>
+              <p class="eyebrow eyebrow--gold">Wedding photography</p>
+              <h2>For the vows, and all that surrounds them.</h2>
+              <p>From the first preparations to the final family embraces, we make an attentive visual record of the people, rituals and small gestures that give your wedding its character.</p>
               <ul class="service-detail-card__list">
-                <li>Senior lead documentary photographers on-site</li>
-                <li>Full ceremony coverage from dawn preparations to bidaai</li>
-                <li>Heirloom bridal portraits with natural ambient lighting</li>
-                <li>Curated, color-graded high-resolution digital master collection</li>
-                <li>Private, password-protected cloud gallery for lifetime preservation</li>
+                <li>Coverage planned around your ceremony schedule and family priorities</li>
+                <li>Portraits, candid moments and a considered record of the celebration</li>
+                <li>A carefully edited collection delivered in a private online gallery</li>
               </ul>
-              <a class="button button--gold" href="inquiry.html">Inquire for wedding dates</a>
+              <a class="text-link" href="inquiry.html">Enquire about your wedding <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <!-- 02. Cinematic 4K Wedding Films & Teasers -->
-          <article class="service-detail-card service-detail-card--reversed" id="service-cinematic-films">
+          <!-- 02. Pre-wedding portraiture -->
+          <article class="service-detail-card service-detail-card--reversed" id="service-prewedding">
             <div class="service-detail-card__media">
-              <img src="assets/images/stories/demo-reception-night.jpg" alt="Couple dancing beneath illuminated chandeliers." loading="lazy" width="800" height="600" />
+              <img src="assets/images/groom-bride/groom_bride_ceil_pose_looking_eachothe.jpg" alt="A couple sharing a quiet glance in a palace setting." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
-              <span class="service-detail-card__num">02 / चलचित्र</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Cinematography &amp; Motion</p>
-              <h2>Cinematic 4K Films &amp; Teaser Reels</h2>
-              <p>We craft wedding cinema with narrative depth, spatial audio, and organic color grading. We capture the tremble in your father's voice during the sehra bandi, the mother's whispered aashirwad, and the rhythm of the shehnai echoing in the courtyard.</p>
+              <span class="service-detail-card__num">02 / मिलन</span>
+              <p class="eyebrow eyebrow--gold">Pre-wedding portraits</p>
+              <h2>A portrait of the two of you, as you are.</h2>
+              <p>An unhurried session gives you space to settle into the camera and make images that feel personal—whether among familiar streets, open landscapes or a place of particular meaning.</p>
               <ul class="service-detail-card__list">
-                <li>Feature Wedding Film (25–45 minutes of complete ceremony &amp; vows)</li>
-                <li>Director's Cut Cinematic Highlight Reel (5–8 minutes, 4K Cinema)</li>
-                <li>Curated Vertical Teaser Reels (60–90 seconds) for immediate sharing</li>
-                <li>Multi-channel spatial audio recording with discrete lavalier mics</li>
-                <li>Master color grading in DaVinci Resolve honoring warm Indian skin tones</li>
+                <li>Location and timing chosen together to suit your story</li>
+                <li>Gentle direction with room for natural conversation and movement</li>
+                <li>Edited photographs suited to announcements, keepsakes and sharing</li>
               </ul>
-              <a class="button button--gold" href="films.html">Watch our wedding films</a>
+              <a class="text-link" href="inquiry.html">Plan a portrait session <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <!-- 03. Pre-Wedding & Post-Wedding Shoots -->
-          <article class="service-detail-card" id="service-prewedding">
+          <!-- 03. Candid photography -->
+          <article class="service-detail-card" id="service-candid">
             <div class="service-detail-card__media">
-              <img src="assets/images/groom-bride/groom_bride_ceil_pose_looking_eachothe.jpg" alt="Couple sharing an intimate glance in royal setting." loading="lazy" width="800" height="600" />
+              <img src="assets/images/groom-bride/groom_bride_blur_portrait.jpg" alt="A tender, unposed moment between newlyweds." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
-              <span class="service-detail-card__num">03 / पूर्व मिलन</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Portraiture &amp; Storytelling</p>
-              <h2>Pre-Wedding &amp; Post-Wedding Journals</h2>
-              <p>An unhurried portrait journey before the wedding whirlwind begins. In quiet palace corridors, ancestral courtyards, or open golden horizons, we document your connection without the constraints of ceremony timers.</p>
+              <span class="service-detail-card__num">03 / दृष्टि</span>
+              <p class="eyebrow eyebrow--gold">Candid photography</p>
+              <h2>The moments that happen between the rituals.</h2>
+              <p>We look beyond the formal portraits: a shared smile across the mandap, a grandparent’s blessing, the joyful commotion of relatives meeting again.</p>
               <ul class="service-detail-card__list">
-                <li>Half-day or full-day bespoke location session</li>
-                <li>Creative moodboard, architectural scouting, and styling guidance</li>
-                <li>80–120 hand-edited fine art portraits ready for invitations</li>
-                <li>Optional 2-minute cinematic prologue film with ambient sound</li>
-                <li>Available across Rajasthan palaces, coastal retreats, and overseas locales</li>
+                <li>Unposed guest and family moments throughout the event</li>
+                <li>Attention to the atmosphere, setting and details of the day</li>
+                <li>A visual narrative that complements your formal portraits</li>
               </ul>
-              <a class="button button--gold" href="inquiry.html">Plan a pre-wedding journal</a>
+              <a class="text-link" href="portfolio.html">View the photography <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <!-- 04. Milestone Ceremonies & Sangeet -->
-          <article class="service-detail-card service-detail-card--reversed" id="service-milestones">
+          <!-- 04. Ritual documentation -->
+          <article class="service-detail-card service-detail-card--reversed" id="service-rituals">
             <div class="service-detail-card__media">
-              <img src="assets/images/stories/demo-mehndi-hands.jpg" alt="Mehndi henna art on bride's hands." loading="lazy" width="800" height="600" />
+              <img src="assets/images/stories/demo-pheras-fire.jpg" alt="A sacred wedding fire glowing during the pheras." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
-              <span class="service-detail-card__num">04 / उत्सव</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Pre-Wedding Celebrations</p>
-              <h2>Engagement, Mehndi, Haldi &amp; Sangeet</h2>
-              <p>Every Indian wedding is a symposium of multiple days, colors, and emotions. From the golden turmeric glow of the Haldi to the electric rhythm of the Sangeet stage, our team captures the full tapestry of your celebration.</p>
+              <span class="service-detail-card__num">04 / संस्कार</span>
+              <p class="eyebrow eyebrow--gold">Ceremony and tradition</p>
+              <h2>Every rite, witnessed with care.</h2>
+              <p>We learn the order and meaning of your ceremonies before the day, so we can work with discretion as each family’s customs unfold—from the first blessing to the saptapadi.</p>
               <ul class="service-detail-card__list">
-                <li>Dedicated multi-camera coverage for high-energy Sangeet performances</li>
-                <li>Gentle, natural-light portraiture during intimate Haldi and Mehndi mornings</li>
-                <li>Guest candid moments and spontaneous family interactions</li>
-                <li>Fast-turnaround social highlights delivered during the wedding week</li>
+                <li>Planning around the ceremony sequence and key family participants</li>
+                <li>Respectful coverage of sacred rites, offerings and blessings</li>
+                <li>Portraits and details made without interrupting the proceedings</li>
               </ul>
-              <a class="button button--gold" href="inquiry.html">Discuss multi-day coverage</a>
+              <a class="text-link" href="inquiry.html">Share your ceremony plans <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <!-- 05. Heirloom Albums & Print Editions -->
-          <article class="service-detail-card" id="service-heirloom-albums">
+          <!-- 05. Cinematography -->
+          <article class="service-detail-card" id="service-films">
             <div class="service-detail-card__media">
-              <img src="assets/images/bride/bride-mirror-portrait-two.jpg" alt="Bride in twilight room reflecting on heirloom memories." loading="lazy" width="800" height="600" />
+              <img src="assets/images/stories/demo-reception-film.png" alt="A wedding film frame from an evening celebration." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
-              <span class="service-detail-card__num">05 / धरोहर</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Archival Print &amp; Tangible Legacy</p>
-              <h2>Heirloom Handcrafted Albums &amp; Photobooks</h2>
-              <p>A digital file is fleeting; a handcrafted album is passed down across generations. Our master bookbinders print each volume on 100% archival cotton rag paper, bound in genuine leather, Japanese silk, or natural Italian linen.</p>
+              <span class="service-detail-card__num">05 / चलचित्र</span>
+              <p class="eyebrow eyebrow--gold">Cinematography and films</p>
+              <h2>The sound and movement of the day.</h2>
+              <p>A wedding film holds the cadence of the vows, the music, the spoken blessings and the voices you will want to hear again. We shape these elements into a film with a sense of place and feeling.</p>
               <ul class="service-detail-card__list">
-                <li>Bespoke editorial layout designed image-by-image (no generic templates)</li>
-                <li>Museum-grade archival pigment printing with guaranteed 100-year color fidelity</li>
-                <li>Custom debossed typography with couple's monogram and wedding date</li>
-                <li>Accompanied by a handcrafted wooden or clamshell presentation case</li>
-                <li>Parent and family duplicate editions available upon request</li>
+                <li>Coverage planned alongside photography for a thoughtful, unobtrusive crew</li>
+                <li>Natural sound, ceremony audio and the atmosphere of the celebration</li>
+                <li>A carefully edited film, with additional formats discussed in advance</li>
               </ul>
-              <a class="button button--gold" href="inquiry.html">Order an heirloom album</a>
+              <a class="text-link" href="films.html">Discover our films <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
-          <!-- 06. Destination Wedding Expeditions -->
-          <article class="service-detail-card service-detail-card--reversed" id="service-destination-expeditions">
+          <!-- 06. Celebrations -->
+          <article class="service-detail-card service-detail-card--reversed" id="service-celebrations">
             <div class="service-detail-card__media">
-              <img src="assets/images/stories/demo-destination-landscape.jpg" alt="Hilltop fortress in Rajasthan at sunset." loading="lazy" width="800" height="600" />
+              <img src="assets/images/stories/demo-mehndi-hands.jpg" alt="Mehndi adornment on a bride's hands." loading="lazy" width="800" height="600" />
             </div>
             <div class="service-detail-card__content">
-              <span class="service-detail-card__num">06 / देशाटन</span>
-              <p class="eyebrow" style="color: var(--color-gold);">Pan-India &amp; International</p>
-              <h2>Destination Wedding Expeditions</h2>
-              <p>Whether your celebration is set against the palace lakes of Udaipur, the backwaters of Kerala, the temples of Banaras, or the rolling hills of Tuscany, our seasoned crew travels with complete logistical autonomy.</p>
+              <span class="service-detail-card__num">06 / उत्सव</span>
+              <p class="eyebrow eyebrow--gold">Celebrations before the wedding</p>
+              <h2>Engagement, mehndi, haldi and sangeet.</h2>
+              <p>Each gathering has its own rhythm. We can document a single evening or join you across several days, making space for the exuberance of the celebration and the quieter family moments around it.</p>
               <ul class="service-detail-card__list">
-                <li>End-to-end multi-day domestic and international coverage</li>
-                <li>Pre-wedding reconnaissance and site inspection 24–48 hours prior</li>
-                <li>Licensed aerial drone cinematography for breathtaking venue vistas</li>
-                <li>Complete crew travel, equipment carnets, and transport handled smoothly</li>
-                <li>Same-day or next-day on-site edit previews for reception screens</li>
+                <li>Photography and film coverage shaped to each event</li>
+                <li>Portraits, performances, family welcomes and candid celebrations</li>
+                <li>One coordinated plan for the events you choose to include</li>
               </ul>
-              <a class="button button--gold" href="travel.html">Explore our travel calendar</a>
+              <a class="text-link" href="inquiry.html">Plan your celebration coverage <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 07. Destination coverage -->
+          <article class="service-detail-card" id="service-destination">
+            <div class="service-detail-card__media">
+              <img src="assets/images/stories/demo-destination-landscape.jpg" alt="A hilltop fort above the Rajasthan landscape." loading="lazy" width="800" height="600" />
+            </div>
+            <div class="service-detail-card__content">
+              <span class="service-detail-card__num">07 / देशाटन</span>
+              <p class="eyebrow eyebrow--gold">Destination celebrations</p>
+              <h2>Where your families gather, we can follow.</h2>
+              <p>From a palace courtyard to a faraway coast, destination work begins with learning the place and planning thoughtfully around its light, movement and customs.</p>
+              <ul class="service-detail-card__list">
+                <li>Location and schedule planning for travel celebrations</li>
+                <li>Photography and film options arranged to suit the setting</li>
+                <li>Travel and production requirements confirmed with you beforehand</li>
+              </ul>
+              <a class="text-link" href="travel.html">Explore destination work <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 08. Heirloom albums -->
+          <article class="service-detail-card service-detail-card--reversed" id="service-heirloom-albums">
+            <div class="service-detail-card__media">
+              <img src="assets/images/bride/bride-mirror-portrait-two.jpg" alt="A bride in a quiet moment before the ceremony." loading="lazy" width="800" height="600" />
+            </div>
+            <div class="service-detail-card__content">
+              <span class="service-detail-card__num">08 / धरोहर</span>
+              <p class="eyebrow eyebrow--gold">Albums and printed keepsakes</p>
+              <h2>A story made to be held.</h2>
+              <p>Bring your photographs off the screen with a printed album designed around the shape of your celebration, and made to be returned to over the years.</p>
+              <ul class="service-detail-card__list">
+                <li>A considered selection and sequence of photographs</li>
+                <li>Album sizes, finishes and family copies discussed by request</li>
+                <li>Proofing and final approval before an order is placed</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Ask about an album <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 09. Aerial and venue perspectives -->
+          <article class="service-detail-card" id="service-aerial">
+            <div class="service-detail-card__media">
+              <img src="assets/images/stories/demo-destination-wedding-hero.png" alt="A wedding venue set within a broad landscape." loading="lazy" width="800" height="600" />
+            </div>
+            <div class="service-detail-card__content">
+              <span class="service-detail-card__num">09 / आकाश</span>
+              <p class="eyebrow eyebrow--gold">Aerial perspectives</p>
+              <h2>A sense of place, from above.</h2>
+              <p>Where the venue, conditions and local permissions allow, aerial imagery can show the setting and scale of a gathering in a way ground-level photographs cannot.</p>
+              <ul class="service-detail-card__list">
+                <li>Venue and landscape views planned around the event schedule</li>
+                <li>Availability checked against local rules and site permissions</li>
+                <li>Included only when conditions are safe and suitable</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Ask about aerial coverage <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <!-- 10. Family milestones -->
+          <article class="service-detail-card service-detail-card--reversed" id="service-family-celebrations">
+            <div class="service-detail-card__media">
+              <img src="assets/images/stories/demo-family-moment.png" alt="Family sharing a joyful moment at a celebration." loading="lazy" width="800" height="600" />
+            </div>
+            <div class="service-detail-card__content">
+              <span class="service-detail-card__num">10 / परिवार</span>
+              <p class="eyebrow eyebrow--gold">Family gatherings</p>
+              <h2>For the occasions that bring everyone home.</h2>
+              <p>Birthdays, anniversaries and new beginnings deserve to be remembered with the same warmth and attention as a wedding day.</p>
+              <ul class="service-detail-card__list">
+                <li>Coverage planned for intimate gatherings or larger celebrations</li>
+                <li>Natural portraits and a record of the people gathered</li>
+                <li>Photography and film options discussed for each occasion</li>
+              </ul>
+              <a class="text-link" href="inquiry.html">Enquire about a family gathering <span aria-hidden="true">↗</span></a>
             </div>
           </article>
 
@@ -341,37 +493,87 @@
       </div>
     </section>
 
+    <section class="section services-inclusions" aria-labelledby="inclusions-title">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow--gold">A thoughtful approach, from the first conversation</p>
+        <h2 id="inclusions-title">Considered in every detail.</h2>
+        <div class="services-inclusions__grid">
+          <article class="services-inclusion">
+            <h3>Made around your day</h3>
+            <p>We begin with your dates, schedule and priorities, then shape a coverage plan around the events that matter to you.</p>
+          </article>
+          <article class="services-inclusion">
+            <h3>People before poses</h3>
+            <p>Our approach leaves room for ceremonies and family life to unfold naturally, with direction when it is useful and quiet when it is not.</p>
+          </article>
+          <article class="services-inclusion">
+            <h3>Edited with intention</h3>
+            <p>Photographs and films are selected and finished as a cohesive account of your celebration, rather than a collection of hurried moments.</p>
+          </article>
+          <article class="services-inclusion">
+            <h3>Clear from the outset</h3>
+            <p>Team, coverage, travel and delivery details are discussed in your proposal so you know what is included before you decide.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- The Pagphera Process / How We Work -->
-    <section class="section" style="background: var(--color-cream); border-block: 1px solid var(--color-line);" aria-labelledby="process-title">
+    <section class="section services-process" aria-labelledby="process-title">
       <div class="section-inner flow">
-        <p class="eyebrow" style="color: var(--color-gold);">The Way of Seva</p>
-        <h2 id="process-title">Our Process: From First Dialogue to Eternal Keepsake</h2>
-        <p class="lede">How we walk alongside you through each chapter of your celebration.</p>
+        <p class="eyebrow eyebrow--gold">The way of seva</p>
+        <h2 id="process-title">A clear path, held with care.</h2>
+        <p class="lede">We listen first, plan together, and stay attentive to the details through delivery.</p>
 
         <div class="process-timeline">
           <div class="process-step">
             <span class="process-step__num">01</span>
-            <h3 style="font-size: var(--text-base); font-weight: 600;">The Dialogue</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-muted); line-height: 1.6;">We begin with an unhurried conversation to understand your family traditions, venue architecture, and personal priorities.</p>
+            <h3>The conversation</h3>
+            <p>We hear what you are celebrating, learn the family traditions and understand the moments you most want to remember.</p>
           </div>
 
           <div class="process-step">
             <span class="process-step__num">02</span>
-            <h3 style="font-size: var(--text-base); font-weight: 600;">The Vision</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-muted); line-height: 1.6;">We build a custom visual schedule and lighting map for every ceremony, ensuring our team is in position for every sacred transition.</p>
+            <h3>The preparation</h3>
+            <p>Together we confirm the schedule, locations, people and practical details so the team can work with ease and discretion.</p>
           </div>
 
           <div class="process-step">
             <span class="process-step__num">03</span>
-            <h3 style="font-size: var(--text-base); font-weight: 600;">The Day</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-muted); line-height: 1.6;">On the wedding day, our presence is quiet and reverent. We blend seamlessly with your family, capturing emotions as they unfold naturally.</p>
+            <h3>The gathering</h3>
+            <p>We arrive prepared and attentive, documenting the celebration as it happens and respecting the flow of each ritual.</p>
           </div>
 
           <div class="process-step">
             <span class="process-step__num">04</span>
-            <h3 style="font-size: var(--text-base); font-weight: 600;">The Delivery</h3>
-            <p style="font-size: var(--text-sm); color: var(--color-muted); line-height: 1.6;">Each photograph and film frame is meticulously graded and mastered before private digital and physical heirloom delivery.</p>
+            <h3>The keeping</h3>
+            <p>Your selected photographs and films are edited and delivered in the formats agreed in your commission.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-faq-section" aria-labelledby="services-faq-title">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow--gold">Before we begin</p>
+        <h2 id="services-faq-title">A few things couples often ask.</h2>
+        <div class="services-faq">
+          <details>
+            <summary>Can we combine photography and film?</summary>
+            <p>Yes. Tell us which events you would like covered and we can discuss a coordinated photography and film commission.</p>
+          </details>
+          <details>
+            <summary>Can coverage include several wedding events?</summary>
+            <p>We can plan for a single ceremony or a series of gatherings. Your proposal will set out the dates, hours and team included.</p>
+          </details>
+          <details>
+            <summary>Do you travel for destination weddings?</summary>
+            <p>Destination work is considered by location and availability. Travel and production arrangements are agreed with you before booking.</p>
+          </details>
+          <details>
+            <summary>How do we receive our photographs and films?</summary>
+            <p>Delivery details and the expected schedule are confirmed in your proposal. Printed albums and additional formats can be discussed separately.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -379,9 +581,9 @@
     <!-- Inquiry CTA -->
     <section class="section cta-section" aria-labelledby="services-cta-title">
       <div class="cta-section__inner flow">
-        <p class="eyebrow">Start your journey</p>
-        <h2 id="services-cta-title">Let us document your celebration.</h2>
-        <p class="lede">Every wedding is unique. Contact us with your dates and venue details to receive our comprehensive commission catalog and availability.</p>
+        <p class="eyebrow eyebrow--gold">Begin with a conversation</p>
+        <h2 id="services-cta-title">Tell us what you hope to remember.</h2>
+        <p class="lede">Share your dates, place and the traditions closest to you. We’ll be in touch to explore a commission that feels right for your gathering.</p>
         <div class="cta-section__actions">
           <a class="button button--gold" href="inquiry.html">Check dates &amp; availability</a>
           <a class="text-link" href="portfolio.html">Browse photography portfolio <span aria-hidden="true">↗</span></a>

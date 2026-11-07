@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/layouts.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
   <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/careers.js" defer></script>
   <script src="assets/js/cookie-consent.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -161,7 +162,7 @@
               </ul>
             </div>
             <div>
-              <a class="button button--outline" href="inquiry.html?subject=careers-cinematographer">Apply for role →</a>
+              <a class="button button--outline" href="#application-form" data-application-role="Lead Wedding Cinematographer">Apply for role →</a>
             </div>
           </article>
 
@@ -181,7 +182,7 @@
               </ul>
             </div>
             <div>
-              <a class="button button--outline" href="inquiry.html?subject=careers-photographer">Apply for role →</a>
+              <a class="button button--outline" href="#application-form" data-application-role="Editorial Documentary Photographer">Apply for role →</a>
             </div>
           </article>
 
@@ -201,7 +202,7 @@
               </ul>
             </div>
             <div>
-              <a class="button button--outline" href="inquiry.html?subject=careers-colorist">Apply for role →</a>
+              <a class="button button--outline" href="#application-form" data-application-role="Senior Colorist & Film Editor">Apply for role →</a>
             </div>
           </article>
 
@@ -217,12 +218,110 @@
               </p>
             </div>
             <div>
-              <a class="button button--outline" href="inquiry.html?subject=careers-apprentice">Apply for fellowship
+              <a class="button button--outline" href="#application-form" data-application-role="Creative Apprenticeship / Fellowship">Apply for fellowship
                 →</a>
             </div>
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <section class="section career-application" id="application-form" aria-labelledby="application-title">
+      <div class="section-inner">
+        <div class="career-application__intro flow">
+          <p class="eyebrow">Your application</p>
+          <h2 id="application-title">Tell us about your work.</h2>
+          <p class="lede">Share a few details and attach your CV or résumé. A portfolio link is welcome, too.</p>
+          <p class="career-application__notice" role="note">
+            <strong>Application preview.</strong> This website cannot securely receive or store applications yet.
+            Your information and selected file will stay in your browser and will not be sent to Pagphera.
+          </p>
+        </div>
+
+        <form class="career-application__form" id="career-application-form" action="#" method="post"
+          enctype="multipart/form-data">
+          <div class="form-row form-row--two">
+            <div class="field">
+              <label for="application-name">Full name <span class="field-required" aria-hidden="true">*</span></label>
+              <input type="text" id="application-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="application-email">Email address <span class="field-required" aria-hidden="true">*</span></label>
+              <input type="email" id="application-email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row form-row--two">
+            <div class="field">
+              <label for="application-phone">Phone number <span class="field-optional">(optional)</span></label>
+              <input type="tel" id="application-phone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="application-role">Role <span class="field-required" aria-hidden="true">*</span></label>
+              <select id="application-role" name="role" required>
+                <option value="">Choose a role</option>
+                <option>Lead Wedding Cinematographer</option>
+                <option>Editorial Documentary Photographer</option>
+                <option>Senior Colorist &amp; Film Editor</option>
+                <option>Creative Apprenticeship / Fellowship</option>
+                <option>Open application</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="application-portfolio">Portfolio or showreel link <span class="field-optional">(optional)</span></label>
+            <input type="url" id="application-portfolio" name="portfolio" autocomplete="url"
+              placeholder="https://" />
+          </div>
+
+          <div class="field">
+            <label for="application-cv">CV or résumé <span class="field-required" aria-hidden="true">*</span></label>
+            <input type="file" id="application-cv" name="cv" accept=".pdf,.doc,.docx"
+              aria-describedby="application-cv-hint application-cv-error" required />
+            <p class="field-hint" id="application-cv-hint">PDF, DOC or DOCX; maximum file size 10 MB.</p>
+            <p class="field-error" id="application-cv-error" role="alert" aria-live="polite" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="application-note">A note about you <span class="field-optional">(optional)</span></label>
+            <textarea id="application-note" name="note" rows="5"
+              placeholder="Tell us what you enjoy making and what draws you to Pagphera."></textarea>
+          </div>
+
+          <details class="career-application__terms">
+            <summary>Read application and hiring terms</summary>
+            <ul>
+              <li>Please provide accurate information and only share documents you have the right to provide.</li>
+              <li>Submitting an application does not guarantee an interview, selection or employment.</li>
+              <li>Any employment would be subject to a separate written offer setting out the role and its terms.</li>
+              <li>Any identity, reference or eligibility checks will be discussed and carried out where applicable.</li>
+            </ul>
+          </details>
+
+          <div class="field field--consent">
+            <label class="checkbox-label" for="application-hiring-terms">
+              <input type="checkbox" id="application-hiring-terms" name="hiring_terms" required />
+              <span>I have read and agree to the application and hiring terms above. <span class="field-required"
+                  aria-hidden="true">*</span></span>
+            </label>
+          </div>
+
+          <div class="field field--consent">
+            <label class="checkbox-label" for="application-privacy-consent">
+              <input type="checkbox" id="application-privacy-consent" name="privacy_consent" required />
+              <span>I have read the <a href="privacy-policy.html">Privacy Policy</a> and agree that my application
+                details may be used to consider me for this role. <span class="field-required" aria-hidden="true">*</span></span>
+            </label>
+          </div>
+
+          <div class="career-application__actions">
+            <button class="button button--gold" type="submit">Review application</button>
+            <p class="career-application__status" id="application-form-status" role="status" aria-live="polite"
+              tabindex="-1" hidden></p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -234,7 +333,7 @@
         <p class="lede">We are always eager to meet photographers, sound engineers, retouchers, and producers whose
           vision aligns with ours. Send us your portfolio.</p>
         <div class="cta-section__actions">
-          <a class="button button--gold" href="inquiry.html">Send an open application</a>
+          <a class="button button--gold" href="#application-form" data-application-role="Open application">Send an open application</a>
           <a class="text-link" href="about.html">Learn more about our studio <span aria-hidden="true">↗</span></a>
         </div>
       </div>
